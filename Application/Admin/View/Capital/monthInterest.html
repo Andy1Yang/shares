@@ -1,0 +1,95 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>月结返息</h2>
+    </div>
+    <div class="cf">
+        <!-- 高级搜索 -->
+        <div class="search-form fl cf">
+            <div class="fl">
+                <button class="btn ajax-post" url="{:U('returnInterest?user_id='.$_uid.'&startTime='.$_startTime.'&endTime='.$_endTime)}" target-form="ids">返 息</button>
+            </div>
+            <div class="sleft">
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$_startTime}" name="startTime">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$_endTime}"  name="endTime"></span>&nbsp;&nbsp;
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('returnInterest')}" style="float:right;"><i class="btn-search"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+                <th class="">日期</th>
+                <th class="">返息</th>
+                <!--th class="">状态</th-->
+                <th class="">操作</th>
+                <th class="">操作时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_list">
+                <volist name="_list" id="vo">
+                    <tr>
+                        <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}" /></td>
+                        <td>{$vo.date}</td>
+                        <td>{$vo.return_interest}</td>
+                        <!--td>{$vo.status_text}</td-->
+                        <td>
+                            <if condition="($vo['status'] eq 1)">
+                            <!--a class="bigbutton sell" href="{:U('returnInterest?id='.$vo['id']).'&user_id='.$_uid.'&startTime='.$_startTime.'&endTime='.$_endTime}">返息</a-->
+                            <a href="{:U('returnInterest?id='.$vo['id'].'&user_id='.$_uid.'&startTime='.$_startTime.'&endTime='.$_endTime)}" class="ajax-get bigbutton">返息</a>
+                            <else/>
+                                <span>已返息</span>
+                            </if>
+                        </td>
+                        <td>
+                            <if condition="($vo['update_time'] neq 0)">
+                                {$vo.update_time|time_format}
+                            </if>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="12" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //导航高亮
+        var id = {$_uid};
+        highlight_subnav("{:U('Capital/index/id/"+id+"')}");
+    </script>
+</block>

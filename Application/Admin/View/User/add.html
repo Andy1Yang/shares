@@ -1,0 +1,100 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>新增业务员</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">名字<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="nickname" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">密码<span class="check-tips">（用户密码不能少于6位）</span></label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="password" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">确认密码</label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="repassword" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营业部</label>
+            <div class="controls">
+                <select name="sales_id" id="">
+                    <volist name="_sales_list" id="sa">
+                        <option value="{$sa.id}">{$sa.title}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">佣金提成比例<span class="check-tips">（%）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="yonjin_rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">利息提成比例</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="lixi_rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">级别</label>
+            <div class="controls">
+                <select name="level" id="">
+                    <option value="1">老板</option>
+                    <option value="2" >主管</option>
+                    <option value="3" >普通业务员</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">手机号</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="telephone" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">性别</label>
+            <div class="controls">
+                <select name="sex" id="">
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">状态</label>
+            <div class="controls">
+                <select name="status" id="">
+                    <option value="1">开启</option>
+                    <option value="0">禁用</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">排序<span class="check-tips">（值越大排越前面）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="sort" value="1">
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('User/index')}');
+    </script>
+</block>

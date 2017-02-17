@@ -1,0 +1,60 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>修改资金流水</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">保证金<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="ensure_money" value="{$_res.ensure_money}">
+                <input type="hidden" class="text input-large" name="is_edit" value="1">
+                <input type="hidden" class="text input-large" name="id" value="{$_res.id}">
+                <input type="hidden" class="text input-large" name="user_id" value="{$_res.user_id}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">可用资金<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="able_money" value="{$_res.able_money}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">发生金额<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="happen_money" value="{$_res.happen_money}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">操作时间</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="do_time" value="{$_res.do_time|date='Y-m-d H:i:s',###}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">交易编码</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="deal_code" value="{$_res.deal_code}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">操作备注</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="remarks" value="{$_res.remarks}">
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        var id = {$_res.user_id};
+        highlight_subnav("{:U('Capital/index/id/"+id+"')}");
+    </script>
+</block>

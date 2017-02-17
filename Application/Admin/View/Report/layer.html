@@ -1,0 +1,139 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>业务员提成</h2>
+    </div>
+    <div class="cf">
+        <!-- 高级搜索 -->
+        <div class="search-form fl cf">
+            <div class="sleft">
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="{$start}" name="start">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="{$end}"  name="end"></span>&nbsp;&nbsp;
+                营业部门：
+                <select name="sales_id" id="sales_id">
+                    <option value="">--请选择--</option>
+                    <volist name="_salesList" id="sa">
+                        <option value="{$sa.id}" <if condition="$sa['id'] eq $sales_id">selected='selected'</if>>{$sa.title}</option>
+                    </volist>
+                </select>&nbsp;&nbsp;
+                业务员：
+                <select name="member_id" id="member_id">
+                    <option value="">--请选择--</option>
+                    <volist name="_memberList" id="me">
+                        <option style="display:none" said="{$me.sales_id}" value="{$me.uid}" <if condition="$me['uid'] eq $member_id">selected='selected'</if>>{$me.nickname}</option>
+                    </volist>
+                </select>
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('layer')}" style="float:right;"><i class="btn-search"></i></a>
+            </div>
+        </div>
+        <!--div class="fl">
+            <a class="btn" href="{:U('add')}">导  出</a>
+        </div-->
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="little_font">业务员</th>
+                <th class="little_font">客户</th>
+                <th class="little_font">利率（毫/天）</th>
+                <th class="little_font">代理利率（毫/天）</th>
+                <th class="little_font">利息总额</th>
+                <th class="little_font">利息收益</th>
+                <th class="little_font">提成比例（%）</th>
+                <th class="little_font">利息提成</th>
+                <th class="little_font">佣金费率(‰)</th>
+                <th class="little_font">代理佣金(‰)</th>
+                <th class="little_font">佣金总额</th>
+                <th class="little_font">佣金收益</th>
+                <th class="little_font">提成比例（%）</th>
+                <th class="little_font">佣金提成</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_list">
+                <volist name="_list" id="vos">
+                    <volist name="vos" id="vo">
+                    <tr>
+                        <td>{$vo.nickname} </td>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.rate}</td>
+                        <td>{$vo.dali_rate}</td>
+                        <td>{$vo.total_interest}</td>
+                        <td>{$vo.profit_interest}</td>
+                        <td>{$vo.lixi_rate}</td>
+                        <td>{$vo.interest_ticheng}</td>
+                        <td>{$vo.yonjin_rate}</td>
+                        <td>{$vo.daili_yongjin_rate}</td>
+                        <td>{$vo.total_yongjin}</td>
+                        <td>{$vo.profit_yongjin}</td>
+                        <td>{$vo.yonjin_rate}</td>
+                        <td>{$vo.yonjin_ticheng}</td>
+                    </tr>
+                    </volist>
+                </volist>
+                <else/>
+                <td colspan="14" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            var sales_id = $('#sales_id').val();
+            var user_id = $('#member_id').val();
+            if(sales_id!=''){
+                url += '&sales_id='+sales_id;
+            }
+            if(user_id!='') {
+                url += '&member_id=' + user_id;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //营业部和营业员联动
+        $('#sales_id').blur(function(){
+            var salesId= $(this).val();
+            $('#member_id option').css('display','none');
+            $('#member_id option[said='+salesId+']').css('display','block');
+        });
+        var salesId = $('#sales_id').val();
+        if(salesId!=null && salesId!=''){
+            $('#member_id option').css('display','none');
+            $('#member_id option[said='+salesId+']').css('display','block');
+        }
+        //导航高亮
+        highlight_subnav('{:U('Report/layer')}');
+    </script>
+</block>

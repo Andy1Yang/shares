@@ -1,0 +1,188 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>账户添加</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">姓名<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="name" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">质押比例<span class="check-tips">（单位：倍）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="pledge" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">利率<span class="check-tips">（单位：毫/天）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">佣金费率 <span class="check-tips">（单位：‰）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="yongjin_rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">资金预警<span class="check-tips">（单位：％）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="capital_waring" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">账户平仓<span class="check-tips">（单位：％）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="flat" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">收过户费<span class="check-tips">（单位：元/千股）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="transfer" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <span class="item-label" style="display: inline;">月底返息:</span>
+            <span class="controls">
+                是<input type="radio" name="return_rate" value="1" checked="true">&nbsp;
+                否 <input type="radio" name="return_rate" value="2">
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label" style="display: inline;">收手续费:</span>
+            <span class="controls">
+                是<input type="radio" name="hand_cost" value="1" checked="true">&nbsp;
+                否 <input type="radio" name="hand_cost" value="2">
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营业部</label>
+            <div class="controls">
+                <select name="sales_id" id="">
+                    <volist name="_sales_list" id="sa">
+                        <option value="{$sa.id}">{$sa.title}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">业务员</label>
+            <div class="controls">
+                <select name="member_id" id="">
+                    <volist name="_member_list" id="me">
+                        <option value="{$me.uid}">{$me.nickname}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <span class="item-label" style="display: inline;">状态:</span>
+            <span class="controls">
+                有效<input type="radio" name="status" checked="true" value="1">&nbsp;
+                无效<input type="radio" name="status" value="2">
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label">排序<span class="check-tips">（值越大排越前面）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="sort" value="1">
+            </div>
+        </div>
+        <div style="margin: 13px 0px;">
+            <label class="item-label line">个人信息</label>
+        </div>
+        <div class="form-item">
+            <label class="item-label">身份证号码</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="body_card" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">会员邮件</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="email" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">手机号</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="telephone" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label" style="display:inline">出生日期：</label>
+            <span class="controls">
+                <input type="text" class="text2" name="year" value="">年
+                <input type="text" class="text2" name="month" value="">月
+                <input type="text" class="text2" name="day" value="">日
+            </span>
+        </div>
+        <div class="form-item">
+            <span class="item-label" style="display: inline;">性别:</span>
+            <span class="controls">
+                男<input type="radio" name="sex" value="1">&nbsp;
+                女<input type="radio" name="sex" value="2">
+            </span>
+        </div>
+
+        <div style="margin: 13px 0px;">
+            <label class="item-label line">其他</label>
+        </div>
+        <div class="form-item">
+            <span class="item-label" style="display: inline;">有无子女:</span>
+            <span class="controls">
+                有<input type="radio" name="child" value="1">&nbsp;
+                无<input type="radio" name="child" value="2">
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label" style="display:inline">籍贯:</label>
+            <span class="controls">
+                <select name="province1" id=""></select>
+                <select name="city1" id=""></select>
+                <select name="area1" id=""></select>
+            </span>
+        </div>
+        <div class="form-item">
+            <label class="item-label" style="display:inline">户口所在地:</label>
+            <span class="controls">
+                <select name="province2" id=""></select>
+                <select name="city2" id=""></select>
+                <select name="area2" id=""></select>
+            </span>
+        </div>
+        <script type="text/javascript">
+            new PCAS("province1","city1","area1","SPT","SCT","SAT") ;
+            new PCAS("province2","city2","area2","SPT","SCT","SAT") ;
+        </script>
+        <div class="form-item">
+            <label class="item-label">居住地址</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="address" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">电话</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="phone" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('User/user_add')}');
+    </script>
+</block>

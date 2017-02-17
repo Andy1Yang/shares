@@ -1,0 +1,101 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>交易结算</h2>
+    </div>
+    <div class="cf">
+        <div class="fl">
+            <a class="btn" href="{:U('index?id='.$_user_info['id'])}">已结交易</a>
+            <!--button class="btn ajax-post confirm" url="{:U('changeStatus?method=deleteUser')}" target-form="ids">导 出</button-->
+        </div>
+    </div>
+
+    <div class="nameinfo">
+        <span>账户名：</span>{$_user_info.name}&nbsp;&nbsp;
+        <span>质押比例：</span>{$_user_info.pledge}&nbsp;&nbsp;
+        <span>保证金：</span>{$_user_info.ensure_money}&nbsp;&nbsp;
+        <span>可用资金：</span>{$_user_info.able_money}&nbsp;&nbsp;
+
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">状态</th>
+                <th class="">股票代码</th>
+                <th class="">股票名称</th>
+                <th class="">买入金额</th>
+                <th class="">买入费用</th>
+                <th class="">卖出金额</th>
+                <th class="">卖出费用</th>
+                <th class="">利息</th>
+                <th class="">盈亏金额</th>
+                <th class="">卖出时间</th>
+                <th class="">管理员</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_list">
+                <volist name="_list" id="vo">
+                    <tr>
+                        <td>{$vo.status_text} </td>
+                        <td>{$vo.shares_code}</td>
+                        <td>{$vo.shares_name}</td>
+                        <td>{$vo.buy_money}</td>
+                        <td>{$vo.buy_cost}</td>
+                        <td>{$vo.sell_money}</td>
+                        <td>{$vo.sell_cost}</td>
+                        <td>{$vo.interest}</td>
+                        <td><span <if condition="(0 gt $vo['win_loss'])">style="color:red;"</if>>{$vo.win_loss}</span></td>
+                        <td>{$vo.sell_time|date='Y-m-d H:i:s',###}</td>
+                        <td>{$vo.nickname}</td>
+                        <td>
+                            <a style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;" href="{:U('Account/winLoss_to_ensure?id='.$vo['id'])}" class="confirm ajax-get bigbutton">盈亏转本金</a>
+                            <!--a href="{:U('Account/winLoss_to_cash?id='.$vo['id'])}" class="authorize">盈亏结现</a-->
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="15" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //导航高亮
+        var id = {$_user_info.id};
+        highlight_subnav("{:U('Account/un_deal_list/id/"+id+"')}");
+    </script>
+</block>

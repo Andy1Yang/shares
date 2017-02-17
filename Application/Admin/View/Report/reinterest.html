@@ -1,0 +1,119 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>返息汇总</h2>
+    </div>
+    <div class="cf">
+        <!-- 高级搜索 -->
+        <div class="search-form fl cf">
+            <div class="sleft">
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$start}" name="start">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$end}"  name="end"></span>&nbsp;&nbsp;
+                营业部门：<select name="sales_id" id="sales_id">
+                <option value="">--请选择--</option>
+                <volist name="_salesList" id="sa">
+                    <option value="{$sa.id}" <if condition="$sa['id'] eq $sales_id">selected='selected'</if>>{$sa.title}</option>
+                </volist>
+            </select>&nbsp;&nbsp;
+                客户：<select name="user_id" id="user_id">
+                <option value="">--请选择--</option>
+                <volist name="_userList" id="me">
+                    <option style="display:none;" said="{$me.sales_id}" value="{$me.id}" <if condition="$me['id'] eq $user_id">selected='selected'</if>>{$me.name}</option>
+                </volist>
+            </select>
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('reinterest')}" style="float:right;"><i class="btn-search"></i></a>
+            </div>
+        </div>
+        <!--div class="fl">
+            <a class="btn" href="{:U('add')}">导  出</a>
+        </div-->
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">客户</th>
+                <th class="">开始时间</th>
+                <th class="">结束时间</th>
+                <th class="">总计息金额</th>
+                <th class="">返息利率(万分之)</th>
+                <th class="">返息金额</th>
+                <th class="">管理员</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_list">
+                <volist name="_list" id="vo">
+                    <tr>
+                        <td>{$vo.name}</td>
+                        <td>{$start}</td>
+                        <td>{$end}</td>
+                        <td>{$vo.total_interest}</td>
+                        <td>{$vo.rate}</td>
+                        <td>{$vo.total_reiterest}</td>
+                        <td>{$vo.nickname}</td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="12" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            var sales_id = $('#sales_id').val();
+            var user_id = $('#user_id').val();
+            if(sales_id!=''){
+                url += '&sales_id='+sales_id;
+            }
+            if(user_id!='') {
+                url += '&user_id=' + user_id;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //营业部和客户联动
+        $('#sales_id').blur(function(){
+            var salesId= $(this).val();
+            $('#user_id option').css('display','none');
+            $('#user_id option[said='+salesId+']').css('display','block');
+            $('#user_id option:first').css('display','block');
+        });
+        var salesId = $('#sales_id').val();
+        if(salesId!=null && salesId!=''){
+            $('#user_id option').css('display','none');
+            $('#user_id option[said='+salesId+']').css('display','block');
+            $('#user_id option:first').css('display','block');
+        }
+        //导航高亮
+        highlight_subnav('{:U('Report/reinterest')}');
+    </script>
+</block>

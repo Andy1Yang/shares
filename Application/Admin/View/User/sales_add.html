@@ -1,0 +1,71 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>新增营业部</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">营业部名称<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="title" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">代理利率<span class="check-tips">（单位：毫/天）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="dali_rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">代理佣金费率<span class="check-tips">（单位：%。）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="yongjin_rate" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">负责人</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="name" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">联系电话</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="telephone" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">营业部地址</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="address" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">排序<span class="check-tips">（值越大排越前面）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="sort" value="1">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">状态</label>
+            <div class="controls">
+                <select name="status" id="">
+                    <option value="1">开启</option>
+                    <option value="2">禁用</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('User/sales_list')}');
+    </script>
+</block>

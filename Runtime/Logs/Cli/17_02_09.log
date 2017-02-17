@@ -1,0 +1,178 @@
+[ 2017-02-09T20:36:08+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT sum(occupy_money),user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-09T20:36:40+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-09T20:55:15+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0040s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-09T20:56:11+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-09T20:56:19+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0040s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-09T20:56:51+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0050s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0030s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=1 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=2 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=3 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `rate` FROM `ss_user` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=4 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-09T20:58:21+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0150s ]
+SQL: SELECT `rate`,`ensure_money` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0050s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=1 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money` FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=2 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money` FROM `ss_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=3 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money` FROM `ss_user` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=4 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-09T21:07:18+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SELECT `rate`,`ensure_money`,`member_id` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0040s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=1 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: member_id D:\phpStudy\WWW\shares\Application\Cli\Controller\CensusController.class.php 第 37 行.
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shares.ss_return_interest_log' doesn't exist
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Filename cannot be empty D:\phpStudy\WWW\shares\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Filename cannot be empty D:\phpStudy\WWW\shares\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '' for inclusion (include_path='.;C:\php\pear') D:\phpStudy\WWW\shares\ThinkPHP\Library\Think\Think.class.php 第 314 行.
+
+[ 2017-02-09T21:08:03+08:00 ] 127.0.0.1 /cli.php?s=cli/Census/returnInterest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0030s ]
+SQL: SELECT `rate`,`ensure_money`,`member_id` FROM `ss_user` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0030s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=1 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: member_id D:\phpStudy\WWW\shares\Application\Cli\Controller\CensusController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ss_return_interest_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `ss_return_interest_log` (`user_id`,`return_interest`,`date`,`add_time`) VALUES ('1','0','2017-02-09','1486645683') [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money`,`member_id` FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=2 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: member_id D:\phpStudy\WWW\shares\Application\Cli\Controller\CensusController.class.php 第 37 行.
+SQL: INSERT INTO `ss_return_interest_log` (`user_id`,`return_interest`,`date`,`add_time`) VALUES ('2','185.47992','2017-02-09','1486645683') [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money`,`member_id` FROM `ss_user` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=3 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: member_id D:\phpStudy\WWW\shares\Application\Cli\Controller\CensusController.class.php 第 37 行.
+SQL: INSERT INTO `ss_return_interest_log` (`user_id`,`return_interest`,`date`,`add_time`) VALUES ('3','30.42828','2017-02-09','1486645683') [ RunTime:0.0000s ]
+SQL: SELECT `rate`,`ensure_money`,`member_id` FROM `ss_user` WHERE ( id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `ensure_money` FROM `ss_capital_log` WHERE ( do_time>=1486569600 and do_time<1486656000 and user_id=4 ) ORDER BY ensure_money LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: member_id D:\phpStudy\WWW\shares\Application\Cli\Controller\CensusController.class.php 第 37 行.
+SQL: INSERT INTO `ss_return_interest_log` (`user_id`,`return_interest`,`date`,`add_time`) VALUES ('4','139.7646','2017-02-09','1486645683') [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

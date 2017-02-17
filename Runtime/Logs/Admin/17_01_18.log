@@ -1,0 +1,1635 @@
+[ 2017-01-18T00:00:08+08:00 ] 127.0.0.1 /admin.php?s=/Report/layer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002558s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0106s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/layer%' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001314s ]
+
+[ 2017-01-18T00:14:01+08:00 ] 127.0.0.1 /admin.php?s=/Report/layer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.006422s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/layer%' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `ss_member`  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=1 )  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=2 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=5 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=6 )  [ RunTime:0.0005s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 85 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: score I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: login I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: last_login_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: last_login_ip I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: status_text I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: status I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: uid I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2017-01-18T00:15:45+08:00 ] 127.0.0.1 /admin.php?s=/Report/layer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0102s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/layer%' ) LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0012s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `ss_member`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=2 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=5 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 88 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=6 )  [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 85 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 157 行.
+NOTIC: [8] Undefined index: nickname I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 144 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 145 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 146 行.
+NOTIC: [8] Undefined index: daili_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 147 行.
+NOTIC: [8] Undefined index: total_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 148 行.
+NOTIC: [8] Undefined index: profit_interest I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 149 行.
+NOTIC: [8] Undefined index: lixi_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 150 行.
+NOTIC: [8] Undefined index: interest_ticheng I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 151 行.
+NOTIC: [8] Undefined index: yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 152 行.
+NOTIC: [8] Undefined index: daili_yonjin_cost_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 153 行.
+NOTIC: [8] Undefined index: total_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 154 行.
+NOTIC: [8] Undefined index: profit_yongjin I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 155 行.
+NOTIC: [8] Undefined index: yonjin_rate I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 156 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2017-01-18T00:16:38+08:00 ] 127.0.0.1 /admin.php?s=/Report/layer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003416s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/layer%' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ss_member`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=1 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=2 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=5 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=6 )  [ RunTime:0.0006s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2017-01-18T00:16:52+08:00 ] 127.0.0.1 /admin.php?s=/Capital/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002356s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0114s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Capital/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0098s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0096s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=8 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 109 行.
+NOTIC: [8] Undefined index: pledge I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 110 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 111 行.
+NOTIC: [8] Undefined index: able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 112 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 152 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 162 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 192 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 334 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-01-18T00:16:54+08:00 ] 127.0.0.1 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003278s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0096s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0094s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0095s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=1 )  [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=8 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 102 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 108 行.
+NOTIC: [8] Undefined index: pledge I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 109 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 110 行.
+NOTIC: [8] Undefined index: able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 111 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 162 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2017-01-18T00:16:57+08:00 ] 127.0.0.1 /admin.php?s=/Report/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003547s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0103s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `ss_user`  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=1 and sell_status=1 )  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0104s ]
+NOTIC: [2] Division by zero I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 42 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 )  [ RunTime:0.0012s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 24 行.
+NOTIC: [2] Division by zero I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 42 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2017-01-18T00:16:58+08:00 ] 127.0.0.1 /admin.php?s=/Report/layer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0096s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/layer%' ) LIMIT 1   [ RunTime:0.0019s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0012s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `ss_member`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=1 )  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=2 )  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=5 )  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 89 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 90 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 91 行.
+NOTIC: [8] Undefined index: rate I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 92 行.
+SQL: SELECT * FROM `ss_user` WHERE ( member_id=6 )  [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bdf70b07236e8e812befe8807d2e7b63.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2017-01-18T00:18:29+08:00 ] 127.0.0.1 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004214s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0106s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0013s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000283s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: buy_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\d76c030ce5fde08ee0636a5d479a12c4.php 第 153 行.
+NOTIC: [8] Undefined index: buy_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\d76c030ce5fde08ee0636a5d479a12c4.php 第 153 行.
+NOTIC: [8] Undefined index: buy_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\d76c030ce5fde08ee0636a5d479a12c4.php 第 153 行.
+NOTIC: [8] Undefined index: buy_time I:\phpStudy\WWW\shares\Runtime\Cache\Admin\d76c030ce5fde08ee0636a5d479a12c4.php 第 153 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001850s ]
+
+[ 2017-01-18T00:18:31+08:00 ] 127.0.0.1 /admin.php?s=/Report/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002709s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0103s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/index%' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `ss_user`  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=1 and sell_status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0094s ]
+NOTIC: [2] Division by zero I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 42 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 )  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 )  [ RunTime:0.0009s ]
+NOTIC: [2] Invalid argument supplied for foreach() I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 24 行.
+NOTIC: [2] Division by zero I:\phpStudy\WWW\shares\Application\Admin\Controller\ReportController.class.php 第 42 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined index: float_ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 131 行.
+NOTIC: [8] Undefined index: beilv I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 132 行.
+NOTIC: [8] Undefined index: float_able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 134 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\3c1dc1b7660b78e2eac45df80b6ab038.php 第 149 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-01-18T00:18:36+08:00 ] 127.0.0.1 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0093s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0107s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=8 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 102 行.
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 108 行.
+NOTIC: [8] Undefined index: pledge I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 109 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 110 行.
+NOTIC: [8] Undefined index: able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 111 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 162 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\c4921982ccba1d7effaada457f8c4abd.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-18T00:18:37+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002179s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0102s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=1 )  [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=8 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 108 行.
+NOTIC: [8] Undefined index: pledge I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 109 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 110 行.
+NOTIC: [8] Undefined index: able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 111 行.
+NOTIC: [8] Undefined variable: _p2 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 170 行.
+NOTIC: [8] Undefined variable: _p1 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 171 行.
+NOTIC: [8] Undefined variable: _allPage1 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 173 行.
+NOTIC: [8] Undefined variable: _p1 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 174 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 177 行.
+NOTIC: [8] Undefined variable: _allPage2 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 232 行.
+NOTIC: [8] Undefined variable: _p2 I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 233 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 236 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 249 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\660d29c550558b2d159f6936d1031408.php 第 460 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2017-01-18T00:18:38+08:00 ] 127.0.0.1 /admin.php?s=/Capital/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Capital/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0099s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0104s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=1 )  [ RunTime:0.0007s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( sales_id=8 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined index: name I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 109 行.
+NOTIC: [8] Undefined index: pledge I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 110 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 111 行.
+NOTIC: [8] Undefined index: able_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 112 行.
+NOTIC: [8] Undefined variable: _page I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 152 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 162 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 192 行.
+NOTIC: [8] Undefined index: id I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 334 行.
+NOTIC: [8] Undefined index: ensure_money I:\phpStudy\WWW\shares\Runtime\Cache\Admin\bd1add356aa3883bb93cb4d9e0cd802b.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2017-01-18T00:18:39+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003307s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0101s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`status` FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY sort desc LIMIT 0,10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0103s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023046s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+

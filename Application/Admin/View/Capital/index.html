@@ -1,0 +1,217 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>资金管理</h2>
+    </div>
+    <div class="cf">
+        <div class="fl">
+            <a class="btn add_capital" href="javascript:;">增加保证金</a>
+            <a class="btn edit_capital" href="javascript:;">减少保证金</a>
+            <a class="btn" href="{:U('monthInterest?id='.$_user_info['id'])}">月结返息</a>
+        </div>
+
+    </div>
+    <div class="nameinfo">
+        <span>账户名：</span>{$_user_info.name}&nbsp;&nbsp;
+        <span>质押比例：</span>{$_user_info.pledge}&nbsp;&nbsp;
+        <span>保证金：</span>{$_user_info.ensure_money}&nbsp;&nbsp;
+        <span>可用资金：</span>{$_user_info.able_money}&nbsp;&nbsp;
+
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped" >
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">操作类型 </th>
+                <th class="">保证金</th>
+                <th class="">发生金额</th>
+                <th class="">可用资金</th>
+                <th class="">操作时间</th>
+                <th class="">管理员</th>
+                <th class="">交易编号</th>
+                <th class="">操作备注</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_capital_list">
+                <volist name="_capital_list" id="vo">
+                    <tr>
+                        <td>{$vo.type_text} </td>
+                        <td>{$vo.ensure_money}</td>
+                        <td>{$vo.happen_money}</td>
+                        <td>{$vo.able_money}</td>
+                        <td><span>{$vo.do_time|time_format}</span></td>
+                        <td><span>{$vo.nickname}</span></td>
+                        <td>{$vo.deal_code}</td>
+                        <td>{$vo.remarks}</td>
+                        <td>
+                            <a href="{:U('Capital/edit?id='.$vo['id'])}" >修改</a>
+                            <a href="{:U('Capital/changeStatus?id='.$vo['id'].'&user_id='.$vo['user_id'])}" class="confirm ajax-get">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+    <script type="text/javascript">
+        /*可以移动div*/
+        var a;
+        document.onmouseup=function(){
+            if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
+        document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        function move(o,e){
+            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+        }
+    </script>
+    <div id="add_capital" style="left: 454px; top: 174px;"  onmousedown="move(this,event)">
+        <p class="black"><a href="javascript:;" class="close">X</a></p>
+        <div class="neikuan">
+            <label class="item-label" style="font-weight: bold;">增加保证金</label>
+            <form action="{:U('doposit')}" class="doposit" method="post">
+                <table cellpadding="80" cellspacing="80">
+                    <tr>
+                        <input type="hidden" name="user_id" value="{$_user_info.id}">
+                        <td class="tdtiao">增加保证金：</td>
+                        <td class="tiaotd2">
+                            <div class="big_word_div"></div>
+                            <input class='man big_word' type="text" name="happen_money" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">操作时间：</td>
+                        <td class="tiaotd"> <input class='man' type="text" name="do_time" value="<?=date('Y-m-d H:i:s',time())?>"></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">操作备注：</td>
+                        <td class="tiaotd"> <input class='man' type="text" name="remarks" value=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao"></td>
+                        <td class="tiaotd">
+                            <input class='sub' type="submit" name="sub" value="提交">
+                            <input class='sub' type="reset" name="" value="重置">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="edit_capital" style="left: 454px; top: 174px;"  onmousedown="move(this,event)">
+        <p class="black"><a href="javascript:;" class="close">X</a></p>
+        <div class="neikuan">
+            <label class="item-label" style="font-weight: bold;">减少保证金</label>
+            <form action="{:U('trim')}" class="doposit" method="post">
+                <table cellpadding="80" cellspacing="80">
+                    <tr>
+                        <input type="hidden" name="user_id" value="{$_user_info.id}">
+                        <td class="tdtiao">减少保证金：</td>
+                        <td class="tiaotd2">
+                            <div class="big_word_div"></div>
+                            <input class='man quget big_word' type="text" name="happen_money" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">操作时间：</td>
+                        <td class="tiaotd"> <input class='man' type="text" name="do_time" value="<?=date('Y-m-d H:i:s',time())?>"></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">操作备注：</td>
+                        <td class="tiaotd"> <input class='man' type="text" name="remarks" value=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao"></td>
+                        <td class="tiaotd">
+                            <input class='sub' type="submit" name="sub" value="提交">
+                            <input class='sub' type="reset" name="" value="重置">
+                            <input type="button" class="sub qing" style="width:65px" name="" value="账户清算">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //导航高亮
+        var id = {$_user_info.id};
+        highlight_subnav("{:U('Capital/index/id/"+id+"')}");
+        //增加保证金
+        $('.add_capital').click(function(){
+             $('#add_capital').css('display','block');
+
+        });
+        //减少保证金
+        $('.edit_capital').click(function(){
+            $('.quget').val('');
+            $('#edit_capital').css('display','block');
+
+        });
+        //账户清算
+        var ensure_money = {$_user_info.ensure_money};
+        $('.qing').click(function(){
+            $('.quget').val(ensure_money);
+        });
+        //关闭弹窗
+        $('.close').click(function(){
+            $('#add_capital').css('display','none');
+            $('#edit_capital').css('display','none');
+        });
+        //数字转中文大写
+        $('.big_word').bind('input propertychange', function() {
+            $(this).siblings('.big_word_div').css('display','block');
+            var num = $(this).val();
+            var bigWord = DX(num);
+            $('.big_word_div').text(bigWord);
+        });
+        $('.big_word').blur(function(){
+            $('.big_word_div').css('display','none');
+        });
+        function DX(n) {
+            if (!/^(0|[1-9]\d*)(\.\d+)?$/.test(n))
+                return "数据非法";
+            var unit = "千百拾亿千百拾万千百拾元角分", str = "";
+            n += "00";
+            var p = n.indexOf('.');
+            if (p >= 0)
+                n = n.substring(0, p) + n.substr(p+1, 2);
+            unit = unit.substr(unit.length - n.length);
+            for (var i=0; i < n.length; i++)
+                str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
+            return str.replace(/零(千|百|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
+        }
+    </script>
+</block>

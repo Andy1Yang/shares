@@ -1,0 +1,139 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>账户资金</h2>
+    </div>
+    <div class="cf">
+        <!-- 高级搜索 -->
+        <div class="search-form fl cf">
+            <div class="sleft">
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$start}" name="start">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$end}"  name="end"></span>&nbsp;&nbsp;
+                营业部门：<select name="sales_id" id="sales_id">
+                <option value="">--请选择--</option>
+                <volist name="_salesList" id="sa">
+                    <option value="{$sa.id}" <if condition="$sa['id'] eq $sales_id">selected='selected'</if>>{$sa.title}</option>
+                </volist>
+            </select>&nbsp;&nbsp;
+                客户：<select name="user_id" id="user_id">
+                <option value="">--请选择--</option>
+                <volist name="_userList" id="me">
+                    <option style="display:none;" said="{$me.sales_id}" value="{$me.id}" <if condition="$me['id'] eq $user_id">selected='selected'</if>>{$me.name}</option>
+                </volist>
+            </select>&nbsp;&nbsp;
+                操作类型：<select name="type" id="type">
+                <option value="">--请选择--</option>
+                <option value="1" <if condition="1 eq $type">selected='selected'</if>>存入保证金</option>
+                <option value="2" <if condition="2 eq $type">selected='selected'</if>>保证金取现</option>
+                <option value="3" <if condition="3 eq $type">selected='selected'</if>>盈亏转本金</option>
+                <option value="4" <if condition="4 eq $type">selected='selected'</if>>月底返息</option>
+                <option value="5" <if condition="5 eq $type">selected='selected'</if>>买入</option>
+                <option value="6" <if condition="6 eq $type">selected='selected'</if>>卖出</option>
+                <option value="7" <if condition="7 eq $type">selected='selected'</if>>盈亏结现</option>
+            </select>
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('cpital')}" style="float:right;"><i class="btn-search"></i></a>
+            </div>
+        </div>
+        <!--div class="fl">
+            <a class="btn" href="{:U('add')}">导  出</a>
+        </div-->
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">姓名</th>
+                <th class="">操作类型</th>
+                <th class="">保证金</th>
+                <th class="">发生金额</th>
+                <th class="">可用资金</th>
+                <th class="">操作时间</th>
+                <th class="">管理员</th>
+                <th class="">交易编号</th>
+                <th class="">操作备注</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_capital_list">
+                <volist name="_capital_list" id="vo">
+                    <tr>
+                        <td>{$vo.name} </td>
+                        <td>{$vo.type_text} </td>
+                        <td>{$vo.ensure_money}</td>
+                        <td>{$vo.happen_money}</td>
+                        <td>{$vo.able_money}</td>
+                        <td><span>{$vo.do_time|time_format}</span></td>
+                        <td><span>{$vo.nickname}</span></td>
+                        <td>{$vo.deal_code}</td>
+                        <td>{$vo.remarks}</td>
+                        <td>
+                            <a href="{:U('Capital/edit?id='.$vo['id'])}" >修改</a>
+                            <a href="{:U('Capital/changeStatus?id='.$vo['id'].'&user_id='.$vo['user_id'])}" class="confirm ajax-get">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            var sales_id = $('#sales_id').val();
+            var user_id = $('#user_id').val();
+            var type = $('#type').val();
+            if(sales_id!=''){
+                url += '&sales_id='+sales_id;
+            }
+            if(type!='') {
+                url += '&type=' + type;
+            }
+            if(user_id!='') {
+                url += '&user_id=' + user_id;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //营业部和客户联动
+        $('#sales_id').blur(function(){
+            var salesId= $(this).val();
+            $('#user_id option').css('display','none');
+             $('#user_id option[said='+salesId+']').css('display','block');             $('#user_id option:first').css('display','block');
+        });
+        var salesId = $('#sales_id').val();
+        if(salesId!=null && salesId!=''){
+            $('#user_id option').css('display','none');
+             $('#user_id option[said='+salesId+']').css('display','block');             $('#user_id option:first').css('display','block');
+        }
+        //导航高亮
+        highlight_subnav('{:U('Report/cpital')}');
+    </script>
+</block>

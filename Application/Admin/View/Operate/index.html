@@ -1,0 +1,369 @@
+<extend name="Public/base" />
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>交易管理</h2>
+    </div>
+    <div class="cf">
+        <div class="fl">
+            <a class="btn buy" href="javascript:;">买 入</a>
+            <a class="btn reflash" href="javascript:location.reload();">刷 新</a>
+        </div>
+    </div>
+
+    <div class="nameinfo">
+        <span>账户名：</span>{$_user_info.name}&nbsp;&nbsp;
+        <span>质押比例：</span>{$_user_info.pledge}&nbsp;&nbsp;
+        <span>保证金：</span>{$_user_info.ensure_money}&nbsp;&nbsp;
+        <span>可用资金：</span>{$_user_info.able_money}&nbsp;&nbsp;
+        <span>浮动可用：</span>{$_user_info['able_money']+$_total_float_win_lost}&nbsp;&nbsp;
+        <span>浮动盈亏：</span>{$_total_float_win_lost}&nbsp;&nbsp;
+
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">股票代码</th>
+                <th class="">股票名称</th>
+                <th class="">市场</th>
+                <th class="">买入数量</th>
+                <th class="">持仓数量</th>
+                <th class="">可卖数量</th>
+                <th class="">成交均价</th>
+                <th class="">当前价格</th>
+                <th class="">买入费用</th>
+                <th class="">卖出费用</th>
+                <th class="">利息费用</th>
+                <th class="">市值</th>
+                <th class="">浮动盈亏</th>
+                <th class="">盈亏比例</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_deal_list2">
+                <volist name="_deal_list2" id="vo">
+                    <tr>
+                        <td>{$vo.shares_code} </td>
+                        <td>{$vo.shares_name}</td>
+                        <td tag="{$vo.market_type}">{$vo.market_type_text}</td>
+                        <td>{$vo.deal_amount}</td>
+                        <td>{$vo.able_sell_amount}</td>
+                        <td><if condition="$vo['is_sell'] eq 1">{$vo.able_sell_amount}<else/>0</if></td>
+                        <td>{$vo.deal_price}</td>
+                        <td>{$vo.now_price}</td>
+                        <td>{$vo.buy_cost}</td>
+                        <td>{$vo.sell_cost}</td>
+                        <td>{$vo.interest}</td>
+                        <td>{$vo.now_value}</td>
+                        <td><span <if condition="(0 gt $vo['float_win_loss'])">style="color:red;"</if>>{$vo.float_win_loss}</span></td>
+                        <td><span <if condition="(0 gt $vo['win_loss_ratio'])">style="color:red;"</if>>{$vo.win_loss_ratio}</span></td>
+                        <td>
+                            <if condition="$vo['is_sell'] eq 1">
+                                <a class="sell" style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;"  href="javascript:;" tag="{$vo.id}">卖出</a>
+                                <else/>
+                                <a style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;"  href="javascript:;" >暂不可卖</a>
+                            </if>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="16" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        <script type="text/javascript" src="__JS__/jquery.min.js"></script>
+        <script type="text/javascript" src="__JS__/jquery.page.js"></script>
+        <div class="tcdPageCode2">
+        </div>
+        <script>
+            $(".tcdPageCode2").createPage({
+                pageCount:{$_allPage2},
+                current:{$_p2},
+                backFn:function(p){
+                    p2 = p;
+                    location.href='/admin.php?s=/Operate/index/id/{$_user_info.id}/p1/'+p1+'/p2/'+p+'/';
+                }
+            });
+        </script>
+    </div>
+
+    <div class="data-table table-striped" style="margin-top:25px;">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">股票代码</th>
+                <th class="">股票名称</th>
+                <th class="">操作类型</th>
+                <th class="">市场</th>
+                <th class="">成交数量</th>
+                <th class="">成交均价</th>
+                <th class="">印花税</th>
+                <th class="">过户费</th>
+                <th class="">委托费</th>
+                <th class="">佣金</th>
+                <th class="">成交金额</th>
+                <th class="">交易时间</th>
+                <th class="">管理员</th>
+                <th class="">状态</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_deal_list">
+                <volist name="_deal_list" id="vo">
+                    <tr>
+                        <td>{$vo.shares_code} </td>
+                        <td>{$vo.shares_name}</td>
+                        <td>{$vo.do_type_text}</td>
+                        <td>{$vo.market_type_text}</td>
+                        <td>{$vo.deal_amount}</td>
+                        <td>{$vo.deal_price}</td>
+                        <td>{$vo.stamp_duty}</td>
+                        <td>{$vo.transfer_fee}</td>
+                        <td>{$vo.entrust_fee}</td>
+                        <td>{$vo.commission}</td>
+                        <td>{$vo.deal_money}</td>
+                        <td>{$vo.deal_time|date='Y-m-d H:i:s',###}</td>
+                        <td>{$vo.nickname}</td>
+                        <td>{$vo.status_text}</td>
+                        <td>
+                            <a href="{:U('Operate/edit?id='.$vo['id'])}" class="authorize">修改</a>
+                            <a href="{:U('Operate/del?id='.$vo['id'].'&uid='.$vo['user_id'])}" class="confirm ajax-get">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="16" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        <div class="tcdPageCode">
+        </div>
+        <script>
+            p2 = {$_p2};
+            p1 = {$_p1};
+            $(".tcdPageCode").createPage({
+                pageCount:{$_allPage1},
+                current:{$_p1},
+                backFn:function(p){
+                    p1 = p;
+                    location.href='/admin.php?s=/Operate/index/id/{$_user_info.id}/p1/'+p+'/p2/'+p2+'/';
+                }
+            });
+        </script>
+    </div>
+    <script type="text/javascript">
+        /*可以移动div*/
+        var a;
+        document.onmouseup=function(){
+            if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
+        document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        function move(o,e){
+            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+        }
+    </script>
+    <div id="buy" style="height:330px;left: 310px; top: 173px;"  onmousedown="move(this,event)">
+        <p class="black"><a href="javascript:;" class="close">X</a></p>
+        <div class="neikuan">
+            <label class="item-label" style="font-weight: bold;">交易管理-买入</label>
+            <form action="{:U('buy')}" class="doposit" method="post">
+                <table cellpadding="80" cellspacing="80">
+                    <tr>
+                        <input type="hidden" name="user_id" value="{$_user_info.id}">
+                        <td class="tdtiao">股票代码：</td>
+                        <td class="tiaotd2"> <input class='man buy_first' type="text" name="shares_code" value=""></td>
+                        <td class="tdtiao">股票名称：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="shares_name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">股票市场：</td>
+                        <td class="tiaotd2">
+                            <select name="market_type" id="">
+                                <option value="1">深市</option>
+                                <option value="2">沪市</option>
+                            </select>
+                        </td>
+                        <td class="tdtiao">买入时间：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="deal_time" value="<?=date('Y-m-d H:i:s',time())?>"></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">买入数量：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="deal_amount" value=""></td>
+                        <td class="tdtiao">买入价格：</td>
+                        <td class="tiaotd2">
+                            <div class="big_word_div"></div>
+                            <input class='man big_word' type="text" name="deal_price" value="">
+                        </td>
+                    </tr>
+                    <!--tr>
+                        <td class="tdtiao">印花税：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="stamp_duty" value=""></td>
+                        <td class="tdtiao">委托费：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="entrust_fee" value=""></td>
+                    </tr-->
+                    <!--tr>
+                        <td class="tdtiao">过户费：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="transfer_fee" value=""></td>
+                        <td class="tdtiao">佣金：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="commission" value=""></td>
+                    </tr-->
+                    <tr>
+                        <td class="tdtiao">操作备注：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="remarks" value=""></td>
+                        <td class="tdtiao"><!--证券账户：--></td>
+                        <td class="tiaotd2">
+                            <!--select name="is_account" id="">
+                                <option value="2">无</option>
+                                <option value="1">有</option>
+                            </select-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tiaotd3" colspan="4">
+                            <input style="margin-right: 40px;" class='sub' type="submit" name="sub" value="提交">
+                            <input style="margin-left: 40px;" class='sub' type="reset" name="" value="重置">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div id="sell" style="height:270px;left: 310px; top: 173px;" onmousedown="move(this,event)">
+        <p class="black"><a href="javascript:;" class="close">X</a></p>
+        <div class="neikuan">
+            <label class="item-label" style="font-weight: bold;">交易管理-卖出</label>
+            <form action="{:U('sell')}" class="doposit" method="post">
+                <table cellpadding="80" cellspacing="80">
+                    <tr>
+                        <input type="hidden" class="sell_id" name="id" value="">
+                        <input type="hidden" class="interest" name="interest" value="">
+                        <input type="hidden" class="sell_cost" name="sell_cost" value="">
+                        <input type="hidden" class="market_type" name="market_type" value="">
+                        <td class="tdtiao">股票代码：</td>
+                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_code' type="text" name="shares_code" value=""></td>
+                        <td class="tdtiao">股票名称：</td>
+                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_name' type="text" name="shares_name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">卖出数量：</td>
+                        <td class="tiaotd2"> <input class='man sell_first' type="text" name="sell_amount" value=""></td>
+                        <td class="tdtiao">可卖数量：</td>
+                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_amount' type="text" name="able_amount" value=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tdtiao">卖出价格：</td>
+                        <td class="tiaotd2">
+                            <div class="big_word_div"></div>
+                            <input class='man big_word' type="text" name="sell_price" value="">
+                        </td>
+                        <td class="tdtiao">卖出时间：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="sell_time" value="<?=date('Y-m-d H:i:s',time())?>"></td>
+                    </tr>
+                    <!--tr>
+                        <td class="tdtiao">免息金额：</td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="free_interest" value="0"></td>
+                        <td class="tdtiao"></td>
+                        <td class="tiaotd2"> <input class='man' type="text" name="" value=""></td>
+                    </tr-->
+                    <tr>
+                        <td class="tiaotd3" colspan="4">
+                            <input style="margin-right: 40px;" class='sub' type="submit" name="sub" value="提交">
+                            <input style="margin-left: 40px;" class='sub' type="reset" name="" value="重置">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div >
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //导航高亮
+        var id = {$_user_info.id};
+        highlight_subnav("{:U('Operate/index/id/"+id+"')}");
+        //买入
+        $('.buy').click(function(){
+            $('#buy').css('display','block');
+            $('.buy_first').focus();
+        });
+        //卖出
+        $('.sell').click(function(){
+            $('#sell').css('display','block');
+            $('.sell_first').focus();
+            var sell_code = $(this).parent().siblings().first().text();
+            var sell_name = $(this).parent().siblings().eq(1).text();
+            var sell_amount = $(this).parent().siblings().eq(4).text();
+            var interest = $(this).parent().siblings().eq(9).text();
+            var sell_cost = $(this).parent().siblings().eq(8).text();
+            var sell_id = $(this).attr('tag');
+            var market_type = $(this).parent().siblings().eq(2).attr('tag');
+            $('.sell_code').val(sell_code);
+            $('.sell_name').val(sell_name);
+            $('.sell_amount').val(sell_amount);
+            $('.sell_id').val(sell_id);
+            $('.interest').val(interest);
+            $('.sell_cost').val(sell_cost);
+            $('.market_type').val(market_type);
+        });
+        //关闭弹窗
+        $('.close').click(function(){
+            $('#buy').css('display','none');
+            $('#sell').css('display','none');
+        });
+
+        //数字转中文大写
+        $('.big_word').bind('input propertychange', function() {
+            $(this).siblings('.big_word_div').css('display','block');
+            var num = $(this).val();
+            var bigWord = DX(num);
+            $('.big_word_div').text(bigWord);
+        });
+        $('.big_word').blur(function(){
+            $('.big_word_div').css('display','none');
+        });
+        function DX(n) {
+            if (!/^(0|[1-9]\d*)(\.\d+)?$/.test(n))
+                return "数据非法";
+            var unit = "千百拾亿千百拾万千百拾元角分", str = "";
+            n += "00";
+            var p = n.indexOf('.');
+            if (p >= 0)
+                n = n.substring(0, p) + n.substr(p+1, 2);
+            unit = unit.substr(unit.length - n.length);
+            for (var i=0; i < n.length; i++)
+                str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
+            return str.replace(/零(千|百|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
+        }
+    </script>
+</block>
