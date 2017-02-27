@@ -62,8 +62,8 @@
                         <td>{$vo.nickname}</td>
                         <td>
                             <a href="{:U('Account/edit?id='.$vo['id'])}" class="authorize">修改</a>
+                            <a href="{:U('Account/del?id='.$vo['id'])}" class="confirm ajax-get">撤销</a>
                             <!--a href="{:U('Account/returnInterest?id='.$vo['id'])}" class="confirm ajax-get">返息</a-->
-                            <!--a href="{:U('AuthManager/group?uid='.$vo['uid'])}" class="authorize">撤销</a-->
                             <a href="{:U('Account/detail?id='.$vo['id'])}" class="confirm">明细</a>
                         </td>
                     </tr>

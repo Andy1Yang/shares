@@ -52,7 +52,10 @@
                 <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
                             <ul class="side-sub-menu">
                                 <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                        <a class="item" href="<?php echo (U($menu["url"])); ?>">
+                                            <?php echo ($menu["title"]); ?>
+                                            <?php if($menu['have_summary'] == 1): ?><span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span><?php endif; ?>
+                                        </a>
                                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -104,8 +107,8 @@
                 <button class="btn ajax-post" url="<?php echo U('returnInterest?user_id='.$_uid.'&startTime='.$_startTime.'&endTime='.$_endTime);?>" target-form="ids">返 息</button>
             </div>
             <div class="sleft">
-                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<?php echo ($_startTime); ?>" name="startTime">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="<?php echo ($_endTime); ?>"  name="endTime"></span>&nbsp;&nbsp;
-                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('returnInterest');?>" style="float:right;"><i class="btn-search"></i></a>
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="<?php echo ($_startTime); ?>" name="startTime">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="<?php echo ($_endTime); ?>"  name="endTime"></span>&nbsp;&nbsp;
+                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('monthInterest?&id='.$_uid);?>" style="float:right;"><i class="btn-search"></i></a>
             </div>
         </div>
     </div>

@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -21,7 +21,7 @@ return array(
     'VAR_URL_PARAMS'       => '', // PATHINFO URL参数变量
     'URL_PATHINFO_DEPR'    => '/', //PATHINFO URL分割符
 
-    'ORIGINAL_TABLE_PREFIX' => '股票管理平台_', //默认表前缀
+    'ORIGINAL_TABLE_PREFIX' => '股票配资管理平台_', //默认表前缀
 
     /* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(

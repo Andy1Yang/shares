@@ -346,15 +346,10 @@ class ReportController extends AdminController {
             $deal_list2[$key]['win_loss_ratio'] = number_format($deal_list2[$key]['float_win_loss']/$total_invest*100,2);//盈亏比例
             $total_float_win_lost += $deal_list2[$key]['float_win_loss'];
             //卖出费用
-            $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);
-            if($item['market_type']==1){//深圳
-                $sell_transfer_fee = 0;
-                $entrust_fee = $userModel->count_entrust_fee(1);
-            }else{//上海
-                $sell_transfer_fee = $userModel->count_transfer_fee($item[$key]['able_sell_amount']);
-                $entrust_fee = $userModel->count_entrust_fee(2);
-            }
-            $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);
+            $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);//印花税
+            $sell_transfer_fee = $userModel->count_transfer_fee($item[$key]['now_value']);//过户费
+            $entrust_fee = $userModel->count_entrust_fee(1,$deal_list2[$key]['now_value']); //委托费
+            $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);//佣金
             $deal_list2[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
         }
 
@@ -735,4 +730,8 @@ class ReportController extends AdminController {
         $this->display();
     }
 
+    public function test(){
+        $userModel = D('User');
+        echo $userModel->count_commission(34740.00,0.80);
+    }
 }

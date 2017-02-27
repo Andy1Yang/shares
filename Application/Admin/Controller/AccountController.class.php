@@ -130,7 +130,8 @@ class AccountController extends AdminController {
         $cdata['member_id'] = UID;
         $cdata['type'] = 3;
         $cdata['status'] = 1;
-        if(!M('capital_log')->add($cdata)){
+        $capital_id = M('capital_log')->add($cdata);
+        if(!$capital_id){
 //            echo "<script>alert('盈亏转本金失败！添加资金流水表失败！(请勿重复操作！)');history.go(-1);</script>";exit;
             $this->error('盈亏转本金失败！添加资金流水表失败！(请勿重复操作！)');
         }
@@ -141,6 +142,7 @@ class AccountController extends AdminController {
             $sdata['status'] = 5;
         }
         $sdata['do_type'] = 1;
+        $sdata['capital_id'] = $capital_id;
         $sdata['do_time'] = time();
         if(!M('summary_log')->where('id='.$id)->save($sdata)){
 //            echo "<script>alert('盈亏转本金失败！结算表修改失败！(请勿重复操作！)');history.go(-1);</script>";exit;
@@ -200,17 +202,17 @@ class AccountController extends AdminController {
         $is_edit = I('is_edit');
         if($is_edit==1){
             $user_id =  I('user_id');
-            $data['shares_code'] =  I('shares_code');
-            $data['shares_name'] =  I('shares_name');
-            $data['buy_money'] =  I('buy_money');
-            $data['buy_cost'] =  I('buy_cost');
-            $data['sell_money'] =  I('sell_money');
-            $data['sell_cost'] =  I('sell_cost');
-            $data['interest'] = I('interest');
-            $data['win_loss'] = I('win_loss');
-            $data['sell_time'] = strtotime(I('sell_time'));
+//            $data['shares_code'] =  I('shares_code');
+//            $data['shares_name'] =  I('shares_name');
+//            $data['buy_money'] =  I('buy_money');
+//            $data['buy_cost'] =  I('buy_cost');
+//            $data['sell_money'] =  I('sell_money');
+//            $data['sell_cost'] =  I('sell_cost');
+//            $data['interest'] = I('interest');
+//            $data['win_loss'] = I('win_loss');
+//            $data['sell_time'] = strtotime(I('sell_time'));
             $data['do_time'] = strtotime(I('do_time'));
-            $data['member_id'] = I('member_id');
+//            $data['member_id'] = I('member_id');
             $bool = M('summary_log')->where('id='.$id)->save($data);
             if($bool){
                 $this->success('修改成功！',"/admin.php?s=/Account/index/id/{$user_id}");
@@ -230,20 +232,39 @@ class AccountController extends AdminController {
 
     }
 
-    //撤销    暂不用
+    //撤销
     public function del(){
         $id = I('id');
         $parArr = M('summary_log')->where('id='.$id)->find();
+        $user_info = M('user')->where('id='.$parArr['user_id'])->find();
 
         if(empty($parArr)){
-            echo "<script>alert('撤销失败！');history.go(-1);</script>";exit;
+            $this->error('无此数据，撤销失败！');
+        }
+        //账户本金
+        $data['ensure_money'] = $user_info['ensure_money']-$parArr['win_loss'];
+        if( $data['ensure_money']<0){
+            $this->error('撤销失败！本金不足！)');
+        }
+        $data['able_money'] = $user_info['able_money']-$parArr['win_loss']*$user_info['pledge']+$parArr['win_loss'];
+        if(!M('user')->where('id='.$parArr['user_id'])->save($data)){
+            $this->error('撤销失败)');
+        }
+        //资金流水
+        $cdata['status'] = 3;
+        if(!M('capital_log')->where('id='.$parArr['capital_id'])->save($cdata)){
+            $this->error('撤销失败)');
+        }
+        if($parArr['status']==3){
+            $sdata['status'] = 6;
+        }else{
+            $sdata['status'] = 2;
         }
 
-        $sdata['status'] = 4;
         if(!M('summary_log')->where('id='.$id)->save($sdata)){
-            echo "<script>alert('撤销失败！');history.go(-1);</script>";exit;
+            $this->error('撤销失败！');
         }
-        echo "<script>alert('撤销成功！');location.href='/admin.php?s=/Account/index/id/{$parArr['user_id']}'</script>";
+        $this->success('撤销成功！',U('/Account/index/id/'.$parArr['user_id']));
     }
 
     //明细

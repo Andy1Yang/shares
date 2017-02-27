@@ -52,7 +52,10 @@
                 <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
                             <ul class="side-sub-menu">
                                 <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                        <a class="item" href="<?php echo (U($menu["url"])); ?>">
+                                            <?php echo ($menu["title"]); ?>
+                                            <?php if($menu['have_summary'] == 1): ?><span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span><?php endif; ?>
+                                        </a>
                                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -125,7 +128,7 @@
                 <th class="">管理员</th>
                 <th class="">交易编号</th>
                 <th class="">操作备注</th>
-                <th class="">操作</th>
+                <!--th class="">操作</th-->
             </tr>
             </thead>
             <tbody>
@@ -138,10 +141,10 @@
                         <td><span><?php echo ($vo["nickname"]); ?></span></td>
                         <td><?php echo ($vo["deal_code"]); ?></td>
                         <td><?php echo ($vo["remarks"]); ?></td>
-                        <td>
+                        <!--td>
                             <a href="<?php echo U('Capital/edit?id='.$vo['id']);?>" >修改</a>
                             <a href="<?php echo U('Capital/changeStatus?id='.$vo['id'].'&user_id='.$vo['user_id']);?>" class="confirm ajax-get">删除</a>
-                        </td>
+                        </td-->
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
                 <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
@@ -157,8 +160,13 @@
         document.onmouseup=function(){
             if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
         document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        var mo = false;
         function move(o,e){
-            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            if(mo){
+                a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            }else{
+                return false;
+            }
         }
     </script>
     <div id="add_capital" style="left: 454px; top: 174px;"  onmousedown="move(this,event)">
@@ -325,6 +333,12 @@
     <script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
 
     <script type="text/javascript">
+        $('.black').mousemove(function(){
+            mo = true;
+        });
+        $('.black').mouseout(function(){
+            mo = false;
+        });
         //搜索功能
         $("#search").click(function(){
             var url = $(this).attr('url');

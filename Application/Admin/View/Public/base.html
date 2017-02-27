@@ -58,7 +58,12 @@
                             <ul class="side-sub-menu">
                                 <volist name="sub_menu" id="menu">
                                     <li>
-                                        <a class="item" href="{$menu.url|U}">{$menu.title}</a>
+                                        <a class="item" href="{$menu.url|U}">
+                                            {$menu.title}
+                                            <if condition="$menu['have_summary'] eq 1">
+                                                <span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span>
+                                            </if>
+                                        </a>
                                     </li>
                                 </volist>
                             </ul>

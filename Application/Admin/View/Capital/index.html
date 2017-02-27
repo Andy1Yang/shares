@@ -33,7 +33,7 @@
                 <th class="">管理员</th>
                 <th class="">交易编号</th>
                 <th class="">操作备注</th>
-                <th class="">操作</th>
+                <!--th class="">操作</th-->
             </tr>
             </thead>
             <tbody>
@@ -48,10 +48,10 @@
                         <td><span>{$vo.nickname}</span></td>
                         <td>{$vo.deal_code}</td>
                         <td>{$vo.remarks}</td>
-                        <td>
+                        <!--td>
                             <a href="{:U('Capital/edit?id='.$vo['id'])}" >修改</a>
                             <a href="{:U('Capital/changeStatus?id='.$vo['id'].'&user_id='.$vo['user_id'])}" class="confirm ajax-get">删除</a>
-                        </td>
+                        </td-->
                     </tr>
                 </volist>
                 <else/>
@@ -69,8 +69,13 @@
         document.onmouseup=function(){
             if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
         document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        var mo = false;
         function move(o,e){
-            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            if(mo){
+                a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            }else{
+                return false;
+            }
         }
     </script>
     <div id="add_capital" style="left: 454px; top: 174px;"  onmousedown="move(this,event)">
@@ -146,6 +151,12 @@
     <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
 
     <script type="text/javascript">
+        $('.black').mousemove(function(){
+            mo = true;
+        });
+        $('.black').mouseout(function(){
+            mo = false;
+        });
         //搜索功能
         $("#search").click(function(){
             var url = $(this).attr('url');

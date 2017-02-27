@@ -81,6 +81,18 @@ class MemberModel extends Model {
         session('user_auth', $auth);
         session('user_auth_sign', data_auth_sign($auth));
 
+        /* 读取数据库中的配置 */
+        $config =   S('DB_CONFIG_DATA');
+        if(!$config){
+            $config =   api('Config/lists');
+            S('DB_CONFIG_DATA',$config);
+        }
+        C($config); //添加配置
+        //系统锁屏功能
+        $sessionTime = C('SESSION_TIME');
+        $now = time();
+        $session_time = $now+$sessionTime;
+        session('session_time',$session_time);
     }
 
     public function getNickName($uid){

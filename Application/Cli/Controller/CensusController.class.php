@@ -10,7 +10,7 @@ class CensusController extends CliController{
     //统计每天返息
     public function returnInterest(){
         //交易流水里取占用金额
-        $sql = "SELECT sum(occupy_money) as occupy_money_total,user_id,member_id FROM `ss_deal_log` where status=1 group by user_id";
+        $sql = "SELECT sum(occupy_money) as occupy_money_total,user_id FROM `ss_deal_log` where status=1 group by user_id";
         $Model = new \Think\Model();
         $occupyList = $Model->query($sql);
         $now = time();
@@ -28,16 +28,14 @@ class CensusController extends CliController{
             }
             $differ = $item['occupy_money_total']-$ensure_money;
             if($differ>=0){
-                $returnInterest = $ensure_money*$userArr['rate']/10000;
+                $returnInterest = $ensure_money*$userArr['rate']/1000;
             }else{
-                $returnInterest = $item['occupy_money_total']*$userArr['rate']/10000;
+                $returnInterest = $item['occupy_money_total']*$userArr['rate']/1000;
             }
-            $dayInterest = $item['occupy_money_total']*$userArr['rate']/10000;
             //添加到返息表里去
             $data['user_id'] = $item['user_id'];
             $data['member_id'] = $item['member_id'];
             $data['return_interest'] = $returnInterest;
-            $data['day_interest'] = $dayInterest;
             $data['date'] = $date;
             $data['add_time'] = $now;
             $bool = M('return_interest_log')->add($data);

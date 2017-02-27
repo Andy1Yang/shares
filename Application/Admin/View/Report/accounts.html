@@ -110,7 +110,7 @@
             var salesId= $(this).val();
             $('#user_id option').css('display','none');
             $('#user_id option[said='+salesId+']').css('display','block');
-            $('#user_id option:first').css('display','block');
+            $('#user_id option:first').css('display','block');  $('#user_id').val(0);
         });
         var salesId = $('#sales_id').val();
         if(salesId!=null && salesId!=''){

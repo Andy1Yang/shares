@@ -61,12 +61,19 @@ class UserModel extends Model {
             foreach($res as $key=>$val){ 
                 if($controller=='Account' ){
                     $res[$key]['url'] = "/".$controller."/un_deal_list/id/".$val['id'];
+                    $num = M('summary_log')->where("user_id={$val['id']} and (status=2 or status=6)")->count();
+                    if($num>0){
+                        $res[$key]['have_summary'] = 1;
+                    }else{
+                        $res[$key]['have_summary'] = 2;
+                    }
                 }else{
                     $res[$key]['url'] = "/".$controller."/index/id/".$val['id'];
+                    $res[$key]['have_summary'] = 2;
                 }
             }
             $data[$item['title']] = $res;
-        }
+        }  
         return $data;
     }
 
@@ -108,42 +115,34 @@ class UserModel extends Model {
     public function count_stamp_duty($deal_money){
 
         if(empty($deal_money)){return 0;}
-        $stamp_duty = $deal_money*C('STAMP_DUTY_RATE');
+        $stamp_duty = $deal_money*C('STAMP_DUTY_RATE')/1000;
         if($stamp_duty<C('STAMP_DUTY_MIN')) $stamp_duty = C('STAMP_DUTY_MIN');
         return $stamp_duty;
     }
 
     /**
      * 计算过户费
-     * @param $deal_amount  成交数量
-     * 上交所收，深圳不收，  一千股1元，不足1元1元算    买卖都收
+     * @param $deal_amount  成交金额
      */
-    public function count_transfer_fee($deal_amount){
+    public function count_transfer_fee($deal_money){
 
-        if(empty($deal_amount)){return 0;}
-        $fee = $deal_amount*C('TRANSFER_FEE_RATE');
+        if($deal_money<0){return 0;}
+        $fee = $deal_money*C('TRANSFER_FEE_RATE')/1000;
         if($fee<C('TRANSFER_FEE_MIN')) $fee = C('TRANSFER_FEE_MIN');
         return $fee;
     }
 
     /**
      * 计算委托费
-     * @param $pen 成交笔数
+     * @param $pen 成交金额
      * @param $type 1为深圳 2为上海
-     * 上海收5元   深圳收1元
+     * 委托费：	成交金额*0。暂时不收取，今后修改就可以收取
      */
     public function count_entrust_fee($type=1,$pen=1)
     {
-
-        if (empty($type)) {
-            return 0;
-        }
         $fee = C('ENTRUST_FEE_RATE');
-        if ($type == 1) { //深圳
-            return $fee[1] * $pen;
-        } else {//上交
-            return $fee[0] * $pen;
-        }
+        $val = ($pen*$fee)/1000;
+        return $val;
     }
 
     /**
@@ -151,10 +150,10 @@ class UserModel extends Model {
      * @param $deal_money  成交金额
      * @param $rate  佣金利率
      */
-    public function count_commission($deal_money,$rate){
+    public function count_commission($buy_money,$rate){
 
-        if(empty($deal_money)){return 0;}
-        $fee = $deal_money*$rate/10000;
+        if($buy_money<0){return 0;}
+        $fee = $buy_money*$rate/1000;
         if($fee<C('COMMISSION_MIN')) $fee = C('COMMISSION_MIN');
         return $fee;
     }

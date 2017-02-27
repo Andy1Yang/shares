@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -19,7 +19,7 @@ class IndexController extends Controller{
             session('update',true);
             $msg = '请删除install.lock文件后再运行升级!';
         }else{
-            $msg = '已经成功安装了股票管理平台，请不要重复安装!';
+            $msg = '已经成功安装了股票配资管理平台，请不要重复安装!';
         }
         if(Storage::has('./Data/install.lock')){
             $this->error($msg);

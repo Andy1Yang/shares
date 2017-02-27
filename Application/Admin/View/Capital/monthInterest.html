@@ -12,8 +12,8 @@
                 <button class="btn ajax-post" url="{:U('returnInterest?user_id='.$_uid.'&startTime='.$_startTime.'&endTime='.$_endTime)}" target-form="ids">返 息</button>
             </div>
             <div class="sleft">
-                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$_startTime}" name="startTime">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$_endTime}"  name="endTime"></span>&nbsp;&nbsp;
-                <a class="sch-btn" href="javascript:;" id="search" url="{:U('returnInterest')}" style="float:right;"><i class="btn-search"></i></a>
+                <span>查询时间：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="{$_startTime}" name="startTime">至：<input class="Wdate" type="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" value="{$_endTime}"  name="endTime"></span>&nbsp;&nbsp;
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('monthInterest?&id='.$_uid)}" style="float:right;"><i class="btn-search"></i></a>
             </div>
         </div>
     </div>

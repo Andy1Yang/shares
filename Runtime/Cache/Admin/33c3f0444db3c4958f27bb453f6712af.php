@@ -52,7 +52,10 @@
                 <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
                             <ul class="side-sub-menu">
                                 <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                        <a class="item" href="<?php echo (U($menu["url"])); ?>">
+                                            <?php echo ($menu["title"]); ?>
+                                            <?php if($menu['have_summary'] == 1): ?><span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span><?php endif; ?>
+                                        </a>
                                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -285,7 +288,7 @@
             var salesId= $(this).val();
             $('#user_id option').css('display','none');
             $('#user_id option[said='+salesId+']').css('display','block');
-            $('#user_id option:first').css('display','block');
+            $('#user_id option:first').css('display','block');  $('#user_id').val(0);
         });
         var salesId = $('#sales_id').val();
         if(salesId!=null && salesId!=''){

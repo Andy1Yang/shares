@@ -20,6 +20,7 @@ class AdminController extends Controller {
      * 后台控制器初始化
      */
     protected function _initialize(){
+
         // 获取当前用户ID
         if(defined('UID')) return ;
         define('UID',is_login());
@@ -33,6 +34,20 @@ class AdminController extends Controller {
             S('DB_CONFIG_DATA',$config);
         }
         C($config); //添加配置
+
+        //系统锁屏功能
+        $auth = session('user_auth');
+        if($auth){
+            $session_Time = session('session_time');
+            $now = time();
+            if($session_Time>$now){
+                $sessionTime = C('SESSION_TIME');
+                session('session_time',$now+$sessionTime);
+            }else{//退出
+                D('Member')->logout();
+                session('[destroy]');
+            }
+        }
 
         // 是否是超级管理员
         define('IS_ROOT',   is_administrator());
@@ -270,7 +285,7 @@ class AdminController extends Controller {
                     if($item['id'] == $nav['id']){
                         $menus['main'][$key]['class']='current';
                         //生成child树
-                        $groups = M('Menu')->where(array('group'=>array('neq',''),'pid' =>$item['id']))->distinct(true)->getField("group",true);
+                        $groups = M('Menu')->where(array('group'=>array('neq',''),'pid' =>$item['id']))->order(' sort asc')->distinct(true)->getField("group",true);
                         //获取二级分类的合法url
                         $where          =   array();
                         $where['pid']   =   $item['id'];

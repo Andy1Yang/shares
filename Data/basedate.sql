@@ -124,6 +124,7 @@ CREATE TABLE `ss_deal_log` (
   `occupy_money` decimal(11,2) not null default 0 comment '占用资金',
   `member_id` int(10) NOT NULL DEFAULT '0' COMMENT '管理员id',
   `summary_id` int(10) NOT NULL DEFAULT '0' COMMENT '结算流水_id',
+  `capital_id` int(10) NOT NULL DEFAULT '0' COMMENT '资金流水_id',
   `remarks` VARCHAR(255) not null default '' comment '操作备注',
   `is_account` tinyint(4) not null default 2 comment '证券账户 1有 2无',
   `sell_status` tinyint(4) DEFAULT 1 COMMENT '是否卖出  1未卖出 2已卖出  3卖出登记',

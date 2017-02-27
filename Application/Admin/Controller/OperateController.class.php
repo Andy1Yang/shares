@@ -55,12 +55,14 @@ class OperateController extends AdminController {
             //待卖出列表
             $p2 = intval(I('p2',1));
             $count = $deal_log->where("user_id={$id} and status=1 and do_type=1 and sell_status=1")->count('id');// 查询满足要求的总记录数
-            $allPage2 = ceil($count/4);
-            $start2 = ($p2-1)*4;
+            $allPage2 = ceil($count/8);
+            $start2 = ($p2-1)*8;
             $this->assign('_allPage2',$allPage2);
             $this->assign('_p2',$p2);
-            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit {$start2},4";
+            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit {$start2},8";
+//            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 group by a.shares_code order by a.deal_time DESC,a.id DESC limit {$start2},8";
             $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
+//            echo $sql;exit;
             $deal_list2 = $Model->query($sql);
             int_to_string($deal_list2,$map);
             $userModel = D('User');
@@ -95,15 +97,10 @@ class OperateController extends AdminController {
                 $deal_list2[$key]['interest'] = round($rate*$howDay*$deal_list2[$key]['occupy_money']/10000,3);
                 $deal_list2[$key]['now_value'] = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['now_price'];//当前市值
                 //卖出费用
-                $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);
-                if($item['market_type']==1){//深圳
-                    $sell_transfer_fee = 0;
-                    $entrust_fee = $userModel->count_entrust_fee(1);
-                }else{//上海
-                    $sell_transfer_fee = $userModel->count_transfer_fee($item[$key]['able_sell_amount']);
-                    $entrust_fee = $userModel->count_entrust_fee(2);
-                }
-                $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);
+                $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);//印花税
+                $sell_transfer_fee = $userModel->count_transfer_fee($item[$key]['now_value']);//过户费
+                $entrust_fee = $userModel->count_entrust_fee(1,$deal_list2[$key]['now_value']); //委托费
+                $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);//佣金
                 $deal_list2[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
                 $total_invest = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['deal_price']+$deal_list2[$key]['buy_cost']+$deal_list2[$key]['interest']+$deal_list2[$key]['sell_cost'];
                 $deal_list2[$key]['float_win_loss'] = round($deal_list2[$key]['now_value']-$total_invest,3);//浮动盈亏
@@ -126,26 +123,40 @@ class OperateController extends AdminController {
     }
 
     //买入
-    public function buy(){
+    public function buy($thi=0,$tuid=0,$tdata=array()){
 
-        $user_id =  I('user_id');
-        $data['shares_code'] = I('shares_code');
-        $data['shares_name'] = I('shares_name');
-        $data['market_type'] = I('market_type');
-        $data['deal_time'] = strtotime(I('deal_time'));
-        $data['deal_amount'] = I('deal_amount');
-        $data['able_sell_amount'] = I('deal_amount');
-        $data['deal_price'] = I('deal_price');
+        if($thi==1){
+            $user_id = $tuid;
+            $data = $tdata;
+            $data['able_sell_amount'] =  $data['deal_amount'];
+        }else{
+            $user_id =  I('user_id');
+            $data['shares_code'] = I('shares_code');
+            $data['shares_name'] = I('shares_name');
+            $data['market_type'] = I('market_type');
+            $data['deal_time'] = strtotime(I('deal_time'));
+            $data['deal_amount'] = I('deal_amount');
+            $data['able_sell_amount'] = I('deal_amount');
+            $data['deal_price'] = I('deal_price');
+        }
+
 //        $data['is_account'] = I('is_account');
         header("content-type:text/html;charset=utf-8");
+        //參數驗證
         foreach($data as $item){
             if(empty($item)){
                 echo "<script>alert('买入信息请填写完整！');history.go(-1);</script>";exit;
             }
         }
+        if($data['able_sell_amount']<0 || $data['deal_price']<0){
+            echo "<script>alert('买入信息填写有误！');history.go(-1);</script>";exit;
+        }
+
 //        $data['stamp_duty'] = I('stamp_duty');
 //        $data['entrust_fee'] = I('entrust_fee');
-        $data['remarks'] = I('remarks');
+        if($thi!=1) {
+            $data['remarks'] = I('remarks');
+        }
         $data['do_type'] = 1;
         $happen_money = $data['deal_amount']*$data['deal_price'];
         $data['deal_money'] = $happen_money;
@@ -156,17 +167,16 @@ class OperateController extends AdminController {
         $yuanArr = M('user')->where('id='.$user_id)->field('ensure_money,able_money,pledge,yongjin_rate')->find();
         //买入费用
         $userModel = D('User');
-        if($data['market_type']==1){//深圳
-            $data['entrust_fee'] = $userModel->count_entrust_fee(1);
-        }else{//上海
-            $data['transfer_fee'] = $userModel->count_transfer_fee($data['deal_amount']); //过户费
-            $data['entrust_fee'] = $userModel->count_entrust_fee(2); //委托费
-        }
+        $data['transfer_fee'] = $userModel->count_transfer_fee($happen_money); //过户费
+        $data['entrust_fee'] = $userModel->count_entrust_fee(1,$happen_money); //委托费
         $data['commission'] = $userModel->count_commission($happen_money,$yuanArr['yongjin_rate']);//佣金
         $data['occupy_money'] = $happen_money+$data['stamp_duty']+$data['transfer_fee']+$data['entrust_fee']+$data['commission'];//占用资金
 
         //修改用户表  可用资金
         $udata['able_money'] = $yuanArr['able_money']-$happen_money- $data['stamp_duty']-$data['transfer_fee']-$data['entrust_fee']-$data['commission'];
+        if($udata['able_money']<0){
+            echo "<script>alert('已超过可用资金".-$udata['able_money']."元');history.go(-1);</script>";exit;
+        }
         $bool = M('user')->where('id='.$user_id)->save($udata);
 
         //添加结算流水表
@@ -209,7 +219,7 @@ class OperateController extends AdminController {
         }
 
         //添加收益表
-        $day = date('Y-m-d',time());
+        $day = date('Y-m-d',$data['deal_time']);
         $profitArr = M('profit_log')->where("add_time='{$day}' and user_id={$user_id}")->find();
         $pdata['user_id'] = $user_id;
         $pdata['member_id'] = UID;
@@ -224,8 +234,12 @@ class OperateController extends AdminController {
 
         //添加交易流水
         $data['summary_id'] = $bool4;
+        $data['capital_id'] = $bool2;
         $bool3 = M('deal_log')->add($data);
         if($bool && $bool2 && $bool3 && $bool5){
+            if($thi==1){
+              return true;
+            }
             echo "<script>alert('买入成功！');location.href='/admin.php?s=/Operate/index/id/{$user_id}'</script>";
         }else{
             echo "<script>alert('买入失败！');history.go(-1);</script>";exit;
@@ -233,15 +247,29 @@ class OperateController extends AdminController {
     }
 
     //卖出
-    public function sell(){
-        $id = I('id');
-        $sell_amount = I('sell_amount');
-        $sell_price = I('sell_price');
-        $market_type = I('market_type');
-        $freeInterest = I('free_interest',0);
-        $sell_time = strtotime(I('sell_time'));
+    public function sell($thi=0,$tuid=0,$tid=0,$tdeal_amount=0,$tdeal_price=0,$free_interest=0,$deal_time=0){
+        if($thi==1){
+            $id = $tid;
+            $sell_amount = $tdeal_amount;
+            $sell_price = $tdeal_price;
+            $freeInterest = $free_interest;
+            $sell_time = strtotime($deal_time);
+        }else{
+            $id = I('id');
+            $sell_amount = I('sell_amount');
+            $sell_price = I('sell_price');
+            $freeInterest = I('free_interest',0);
+            $sell_time = strtotime(I('sell_time'));
+        }
         $dealArr = M('deal_log')->where('id='.$id)->find();//买入信息
         header("content-type:text/html;charset=utf-8");
+        //參數驗證
+        if(empty($sell_amount) || empty($sell_price)){
+            echo "<script>alert('卖出信息请填写完整！');history.go(-1);</script>";exit;
+        }
+        if($sell_amount<0 || $sell_price<0){
+            echo "<script>alert('卖出信息填写有误！');history.go(-1);</script>";exit;
+        }
         if($dealArr){
             if($sell_amount>$dealArr['able_sell_amount']){
                 echo "<script>alert('卖出失败！可卖数量不足！');history.go(-1);</script>";exit;
@@ -253,16 +281,31 @@ class OperateController extends AdminController {
                     $sresult = M('summary_log')->where('status=2 and summary_id='.$dealArr['summary_id'])->find();//结算信息
                     $flaut = 'summary_id';
                 }
+
+                //个人账户添加钱
                 $udata = array();
                 $sell_money = $sell_amount*$sell_price;
+                $userModel = D('User');
+                $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);//印花税
+                $sell_transfer_fee = $userModel->count_transfer_fee($sell_money); //过户费
+                $sell_entrust_fee = $userModel->count_entrust_fee(1,$sell_money); //委托费
+                $sell_commission = $userModel->count_commission($sell_money, $user_info['yongjin_rate']);//佣金
+                $sell_cost = $sell_stamp_duty+$sell_transfer_fee+$sell_entrust_fee+$sell_commission;//卖出费用
+                $nowDay =  date('Y-m-d',$sell_time);
+                $buy_time =  date('Y-m-d',$dealArr['deal_time']);//买入时间
+                $rate = $user_info['rate'];
+                $howDay = diffBetweenTwoDays($nowDay,$buy_time)+1;
+                $foccupyMoney = ($sell_amount/$dealArr['able_sell_amount'])*$dealArr['occupy_money'];
+                $interest = $rate*$howDay*$foccupyMoney/10000-$freeInterest;//利息
+
                 if($sell_amount==$dealArr['able_sell_amount']){//全卖出
                     //个人账户添加钱
-                    $sell_cost = I('sell_cost');//卖出费用
-                    $interest = I('interest');//利息
-                    $interest = $interest-$freeInterest;
                     $win_loss = $sell_amount*($sell_price-$dealArr['deal_price'])-$interest-$sell_cost-$sresult['buy_cost'];//盈亏金额
                     $udata['able_money'] = $user_info['able_money']+$sell_money-$sell_cost-$interest;
                     if(!M('user')->where('id='.$dealArr['user_id'])->save($udata)){
+                        if($thi==1){
+                            return false;
+                        }
                         echo "<script>alert('卖出失败！个人账户加钱失败！');history.go(-1);</script>";exit;
                     }
                     //结算流水修改
@@ -277,14 +320,10 @@ class OperateController extends AdminController {
                         $sdata['status'] = 6;
                         $sdata['sell_amount'] = $sell_amount;
                         $sdata['sell_deal_price'] = $sell_price;//应该去查多次的价格然后平均
-                        $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);
-                        if ($market_type == 1) {//深圳
-                            $sell_entrust_fee = $userModel->count_entrust_fee(1);
-                        } else {//上海
-                            $sell_transfer_fee = $userModel->count_transfer_fee($sdata['sell_amount']); //过户费
-                            $sell_entrust_fee = $userModel->count_entrust_fee(2); //委托费
-                        }
-                        $sell_commission = $userModel->count_commission($sdata['sell_money'], $user_info['yongjin_rate']);//佣金
+                        $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);//印花税
+                        $sell_transfer_fee = $userModel->count_transfer_fee($sell_money); //过户费
+                        $sell_entrust_fee = $userModel->count_entrust_fee(1,$sell_money); //委托费
+                        $sell_commission = $userModel->count_commission($sell_money, $user_info['yongjin_rate']);//佣金
                         $sdata['sell_transfer_fee'] = $sell_transfer_fee;
                         $sdata['sell_entrust_fee'] = $sell_entrust_fee;
                         $sdata['sell_commission'] = $sell_commission;
@@ -318,20 +357,16 @@ class OperateController extends AdminController {
                         $sdata['sell_time'] = $sell_time;
                         $sdata['status'] = 6;
                         $sdata['do_time'] = time();//操作时间
-                        $nowDay =  date('Y-m-d',strtotime(I('sell_time')));
+                        $nowDay =  date('Y-m-d',$sell_time);
                         $buy_time = date('Y-m-d', $dealArr['deal_time']);//买入时间
                         $howDay = diffBetweenTwoDays($nowDay, $buy_time) + 1;
                         $sdata['occupy_day'] = $howDay;//只算开始和结束时间，中间有可能有多卖一次
                         $sdata['sell_amount'] = $sresult['sell_amount'] + $sell_amount;
                         $sdata['sell_deal_price'] = $sell_price;//应该去查多次的价格然后平均
-                        $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);
-                        if ($market_type == 1) {//深圳
-                            $sell_entrust_fee = $userModel->count_entrust_fee(1);
-                        } else {//上海
-                            $sell_transfer_fee = $userModel->count_transfer_fee($sdata['sell_amount']); //过户费
-                            $sell_entrust_fee = $userModel->count_entrust_fee(2); //委托费
-                        }
-                        $sell_commission = $userModel->count_commission($sdata['sell_money'], $user_info['yongjin_rate']);//佣金
+                        $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);//印花税
+                        $sell_transfer_fee = $userModel->count_transfer_fee($sell_money); //过户费
+                        $sell_entrust_fee = $userModel->count_entrust_fee(1,$sell_money); //委托费
+                        $sell_commission = $userModel->count_commission($sell_money, $user_info['yongjin_rate']);//佣金
                         $sdata['sell_transfer_fee'] = $sresult['sell_transfer_fee'] + $sell_transfer_fee;
                         $sdata['sell_entrust_fee'] = $sresult['sell_entrust_fee'] + $sell_entrust_fee;
                         $sdata['sell_commission'] = $sresult['sell_commission'] + $sell_commission;
@@ -343,7 +378,7 @@ class OperateController extends AdminController {
                     }
 
                     //添加收益表
-                    $day = date('Y-m-d',time());
+                    $day = date('Y-m-d',$sell_time);
                     $profitArr = M('profit_log')->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->find();
                     $pdata['user_id'] = $dealArr['user_id'];
                     $pdata['member_id'] = UID;
@@ -358,6 +393,9 @@ class OperateController extends AdminController {
                         $bool5 = M('profit_log')->add($pdata);
                     }
                     if(!$bool5){
+                        if($thi==1){
+                            return false;
+                        }
                         echo "<script>alert('卖出失败！添加收益表失败！');history.go(-1);</script>";exit;
                     }
                     //修改交易流水买入记录   不可卖了
@@ -366,31 +404,20 @@ class OperateController extends AdminController {
                     $jdata['sell_status'] = 2;
                     $jdata['occupy_money'] = 0;
                     if(!M('deal_log')->where('id='.$dealArr['id'])->save($jdata)){
+                        if($thi==1){
+                            return false;
+                        }
                         echo "<script>alert('卖出失败！修改交易流水失败！');history.go(-1);</script>";exit;
                     }
 
                 }else{
                     //个人账户添加钱
-                    $userModel = D('User');
-                    $sell_stamp_duty = $userModel->count_stamp_duty($sell_money);
-                    if($market_type==1){//深圳
-                        $sell_entrust_fee = $userModel->count_entrust_fee(1);
-                    }else{//上海
-                        $sell_transfer_fee = $userModel->count_transfer_fee($sell_amount); //过户费
-                        $sell_entrust_fee = $userModel->count_entrust_fee(2); //委托费
-                    }
-                    $sell_commission = $userModel->count_commission($sell_money,$user_info['yongjin_rate']);//佣金
-                    $sell_cost = $sell_stamp_duty+$sell_transfer_fee+$sell_entrust_fee+$sell_commission;//卖出费用
-                    $nowDay =  date('Y-m-d',strtotime(I('sell_time')));
-                    $buy_time =  date('Y-m-d',$dealArr['deal_time']);//买入时间
-                    $rate = $user_info['rate'];
-                    $howDay = diffBetweenTwoDays($nowDay,$buy_time)+1;
-                    $foccupyMoney = ($sell_amount/$dealArr['able_sell_amount'])*$dealArr['occupy_money'];
-                    $interest = $rate*$howDay*$foccupyMoney/10000-$freeInterest;//利息
-                    $interest = $rate*$howDay*$foccupyMoney/10000-$freeInterest;//利息
                     $win_loss = $sell_amount*($sell_price-$dealArr['deal_price'])-$interest-$sell_cost;//盈亏金额
                     $udata['able_money'] = $user_info['able_money']+$sell_money-$sell_cost-$interest;
                     if(!M('user')->where('id='.$dealArr['user_id'])->save($udata)){
+                        if($thi==1){
+                            return false;
+                        }
                         echo "<script>alert('卖出失败！个人账户加钱失败！');history.go(-1);</script>";exit;
                     }
                     //结算流水修改
@@ -427,6 +454,9 @@ class OperateController extends AdminController {
                         $sdata['occupy_money'] = (1-$sell_amount/$dealArr['able_sell_amount'])*$dealArr['occupy_money'];
 
                         if(!M('summary_log')->add($sdata)){
+                            if($thi==1){
+                                return false;
+                            }
                             echo "<script>alert('卖出失败！结算流水修改失败！');history.go(-1);</script>";exit;
                         }
                     }else{
@@ -444,12 +474,15 @@ class OperateController extends AdminController {
                         $sdata['sell_stamp_duty'] = $sresult['sell_stamp_duty']+$sell_stamp_duty;
                         $sdata['occupy_money'] = (1-$sell_amount/$dealArr['able_sell_amount'])*$dealArr['occupy_money'];
                         if(!M('summary_log')->where("(status=2 or status=1) and {$flaut}=".$dealArr['summary_id'])->save($sdata)){
+                            if($thi==1){
+                                return false;
+                            }
                             echo "<script>alert('卖出失败！结算流水修改失败！');history.go(-1);</script>";exit;
                         }
                     }
 
                     //添加收益表
-                    $day = date('Y-m-d',time());
+                    $day = date('Y-m-d',$sell_time);
                     $profitArr = M('profit_log')->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->find();
                     $pdata['user_id'] = $dealArr['user_id'];
                     $pdata['member_id'] = UID;
@@ -464,6 +497,9 @@ class OperateController extends AdminController {
                         $bool5 = M('profit_log')->add($pdata);
                     }
                     if(!$bool5){
+                        if($thi==1){
+                            return false;
+                        }
                         echo "<script>alert('卖出失败！添加收益表失败！');history.go(-1);</script>";exit;
                     }
                     //修改交易流水买入记录   只修改部分
@@ -488,7 +524,11 @@ class OperateController extends AdminController {
                 $cdata['member_id'] = UID;
                 $cdata['type'] = 6;
                 $cdata['status'] = 1;
-                if(!M('capital_log')->add($cdata)){
+                $capital_id = M('capital_log')->add($cdata);
+                if(!$capital_id){
+                    if($thi==1){
+                        return false;
+                    }
                     echo "<script>alert('卖出失败！资金流水记录添加失败！');history.go(-1);</script>";exit;
                 }
 
@@ -504,23 +544,86 @@ class OperateController extends AdminController {
                 $ddata['transfer_fee'] = $sell_transfer_fee;
                 $ddata['entrust_fee'] = $sell_entrust_fee;
                 $ddata['commission'] = $sell_commission;
+                $ddata['interest'] = $interest;
                 $ddata['deal_money'] = $sell_price*$sell_amount;
                 $ddata['deal_time'] = $sell_time;
                 $ddata['member_id'] = UID;
                 $ddata['sell_status'] = 3;
+                $ddata['capital_id'] = $capital_id;
                 if(!M('deal_log')->add($ddata)){
+                    if($thi==1){
+                        return false;
+                    }
                     echo "<script>alert('卖出失败！添加交易流水卖出记录失败！');history.go(-1);</script>";exit;
                 }else{
+                    if($thi==1){
+                        return true;
+                    }
                     echo "<script>alert('卖出成功！');location.href='/admin.php?s=/Operate/index/id/{$dealArr['user_id']}'</script>";
                 }
             }
         }else{
+            if($thi==1){
+                return false;
+            }
             echo "<script>alert('卖出失败！无买入此股票！');history.go(-1);</script>";exit;
         }
     }
 
     //修改
     public function edit(){
+        //获得左边营业部门和对应用户（账户人员）
+        $menu_list = D('User')->get_left_menu_sales(UID,'Operate');
+        $this->assign('_menu_list',$menu_list);
+
+        $id = I('id');
+        $is_edit = I('is_edit');
+        if($is_edit==1){
+            $user_id = I('user_id');
+            $data['shares_code'] =  I('shares_code');
+            $data['shares_name'] =  I('shares_name');
+            $data['market_type'] =  I('market_type');
+            $data['deal_time'] = strtotime(I('deal_time'));
+            $data['deal_amount'] =  I('deal_amount');
+            $data['deal_price'] =  I('deal_price');
+
+            $deal_log = M('deal_log');
+            $dealArr = $deal_log->where("id={$id}")->find();
+
+            if($dealArr['do_type']==1) {//买入
+                $bool = $this->del(1,$id,$user_id);
+                if(!$bool){
+                    $this->error('请先撤销已卖出的操作！');
+                }
+                $bool2 = $this->buy(1,$user_id,$data);
+            }else{
+                $buyArr = $deal_log->where('summary_id='.$dealArr['summary_id'].' and do_type=1')->find();
+                $isbuy = $buyArr['able_sell_amount']+$dealArr['deal_amount']-$data['deal_amount'];
+                if($isbuy>=0 && $data['deal_time']>=$buyArr['deal_time']){
+                    $bool = $this->del(1,$id,$user_id);
+                }else{  
+                    $this->error('提示：卖出数量不可大于买入数量，时间不可以早于买入时间！');
+                }
+                if(!$bool){
+                    $this->error('请先撤销已转本金的操作！');
+                }
+                $bool2 = $this->sell(1,$user_id,$buyArr['id'],I('deal_amount'),I('deal_price'),0,I('deal_time'));
+            }
+            if($bool2){
+                $this->success('修改成功！',"/admin.php?s=/Operate/index/id/{$user_id}");
+            }else{
+                $this->error('修改失败！');
+            }
+        }else{
+            $dealArr = M('deal_log')->where('id='.$id)->find();
+            $memberArr = M('member')->field('uid,nickname')->select();
+            $this->assign('_member_list',$memberArr);
+            $this->meta_title = '修改交易流水';
+            $this->assign('_res',$dealArr);
+            $this->display();
+        }
+    }
+    public function edit2(){
         //获得左边营业部门和对应用户（账户人员）
         $menu_list = D('User')->get_left_menu_sales(UID,'Operate');
         $this->assign('_menu_list',$menu_list);
@@ -558,26 +661,170 @@ class OperateController extends AdminController {
         }
     }
 
-    //删除
-    public function del(){
-        $id = I('id');
-        $uid = I('uid');
+    //撤销
+    public function del($thi=0,$tid=0,$tuid=0){
+        if($thi==1){
+            $id = $tid;
+            $uid = $tuid;
+        }else{
+            $id = I('id');
+            $uid = I('uid');
+        }
         $data['status'] = 3;
         header("content-type:text/html;charset=utf-8");
-        if(M('deal_log')->where("id={$id}")->save($data)){
-            //echo "<script>alert('删除成功！');location.href='/admin.php?s=/Operate/index/id/{$uid}'</script>";exit;
-            $this->success('删除成功！',U('/Operate/index/id/'.$uid));
+        $deal_log = M('deal_log');
+        $user = M('user');
+        $summary_log = M('summary_log');
+        $capital_log = M('capital_log');
+        $profit_log = M('profit_log');
+        //获取交易记录信息
+        $dealArr = $deal_log->where("id={$id}")->find();
+        if($dealArr['do_type']==1){//买入
+            //判断是否有卖出
+            $dealNum = $deal_log->where("summary_id={$dealArr['summary_id']} and status<>3")->count();
+            if($dealNum<2){//未卖出
+                //资金流水表 capital_log
+                $capitalLogArr = $capital_log->where("id={$dealArr['capital_id']}")->find();
+                $capital_log->where("id={$dealArr['capital_id']}")->save($data);
+
+                //用户表  User
+                $userArr = $user->where('id='.$dealArr['user_id'])->find();
+                $udata['able_money'] = $userArr['able_money']-$capitalLogArr['happen_money'];
+                $user->where('id='.$dealArr['user_id'])->save($udata);
+
+                //结算表  summary_log
+                $summary_log->where("id={$dealArr['summary_id']}")->save(array('status'=>4));
+
+                //收益表   profit_log
+                $day = date('Y-m-d',$dealArr['deal_time']);
+                $profitLogArr = $profit_log->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->find();
+                $pdata['total_yongjin'] = $profitLogArr['total_yongjin']-$dealArr['commission'];
+                $profit_log->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->save($pdata);
+
+                //交易流水  deal_log
+                $deal_log->where("id={$id}")->save($data);
+                if($thi==1){
+                    return true;
+                }else{
+                    $this->success('撤销成功！',U('/Operate/index/id/'.$uid));
+                }
+            }else{//有卖出了
+                if($thi==1){
+                    return false;
+                }else{
+                    $this->error('请先撤销已卖出的操作！');
+                }
+            }
+        }else{//卖出撤销
+            //判断是否已经转本金了
+            $summaryLogList = $summary_log->where("id={$dealArr['summary_id']} or summary_id={$dealArr['summary_id']}")->select();
+            $isZhuan = false;
+            foreach($summaryLogList as $item){
+                if($item['status']==3 || $item['status']==5){
+                    $isZhuan = true;
+                }
+            }
+            if(!$isZhuan){//未转
+
+                //资金流水表 capital_log
+                $capitalLogArr = $capital_log->where("id={$dealArr['capital_id']}")->find();
+                $capital_log->where("id={$dealArr['capital_id']}")->save($data);
+
+                //用户表  user
+                $userArr = $user->where('id='.$dealArr['user_id'])->find();
+                $udata['able_money'] = $userArr['able_money']-$capitalLogArr['happen_money'];
+                $user->where('id='.$dealArr['user_id'])->save($udata);
+
+                //结算表  summary_log
+                $summaryLogArr = $summary_log->where("(id={$dealArr['summary_id']} or summary_id={$dealArr['summary_id']}) and (status=2 or status=6)")->find();
+                if($summaryLogArr['buy_amount']==$summaryLogArr['sell_amount']){ //一次性卖出
+                    //修改结算表状态
+                    $summary_log->where("id={$dealArr['summary_id']}")->save(array('status'=>1));
+                }else{//非一次性卖出
+                    //修改结算表状态或修改结算表数据
+                    $sdata['sell_money'] = $summaryLogArr['sell_money'] - $dealArr['deal_money'];
+                    $sdata['sell_cost'] = $summaryLogArr['sell_cost'] -$dealArr['sell_cost'];
+                    $sdata['interest'] = $summaryLogArr['interest'] - $dealArr['interest'];
+                    $sdata['win_loss'] = $summaryLogArr['win_loss'] - $dealArr['win_loss'];
+                    if($sdata['sell_money']==0){
+                        $sdata['status'] = 1;
+                    }else{
+                        $sdata['status'] = 2;
+                    }
+                    $sdata['sell_amount'] = $summaryLogArr['sell_amount'] - $dealArr['deal_amount'];
+                    $sdata['sell_transfer_fee'] = $summaryLogArr['sell_transfer_fee'] - $dealArr['transfer_fee'];
+                    $sdata['sell_entrust_fee'] = $summaryLogArr['sell_entrust_fee'] - $dealArr['entrust_fee'];
+                    $sdata['sell_commission'] = $summaryLogArr['sell_commission'] - $dealArr['commission'];
+                    $sdata['sell_stamp_duty'] = $summaryLogArr['sell_stamp_duty'] - $dealArr['stamp_duty'];
+                    $summary_log->where("id={$dealArr['summary_id']}")->save($sdata);
+                }
+                //收益表   profit_log
+                $day = date('Y-m-d',$dealArr['deal_time']);
+                $profitLogArr = $profit_log->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->find();
+                $pdata['total_yongjin'] = $profitLogArr['total_yongjin']-$dealArr['commission'];
+                $pdata['total_interest'] = $profitLogArr['total_interest']-$dealArr['interest'];
+                $profit_log->where("add_time='{$day}' and user_id={$dealArr['user_id']}")->save($pdata);
+
+                //交易流水  deal_log
+                //修改交易流水买入记录   不可卖了 转为都可以卖了
+                $buyArr = $deal_log->where('summary_id='.$dealArr['summary_id'].' and do_type=1')->find();
+                $jdata = array();
+                $jdata['able_sell_amount'] = $buyArr['able_sell_amount']+$dealArr['deal_amount'];
+                $jdata['sell_status'] = 1;
+                $jdata['occupy_money'] =  $buyArr['occupy_money']+$capitalLogArr['happen_money'];
+                $deal_log->where('summary_id='.$dealArr['summary_id'].' and do_type=1')->save($jdata);
+
+                $deal_log->where("id={$id}")->save($data);
+                if($thi==1){
+                    return true;
+                }else{
+                    $this->success('撤销成功！',U('/Operate/index/id/'.$uid));
+                }
+            }else{//已转
+                if($thi==1){
+                    return false;
+                }else{
+                    $this->error('请先撤销已转本金的操作！');
+                }
+            }
+
         }
-//        echo "<script>alert('删除失败！');history.go(-1);</script>";exit;
-        $this->error('删除失败！');
+
+        $this->error('撤销失败！');
     }
 
-    public function test(){
-        $authListArr = M('auth_rule')->field('id,name')->select();
-        foreach($authListArr as $key=>$item){
-            $bamne = str_replace('//','/',$item['name']);
-            $bamne =  trim($bamne,'/');
-            M('auth_rule')->where('id='.$item['id'])->save(array('name'=>$bamne));
+    //股票名称股市自动化
+    public function self_shares(){
+        $sharesCode = $_POST['shares_code'];
+        if($sharesCode==''){
+            $marketType = 0;
+            $shares_code = '';
+        }else{
+            $fisrtNum = $sharesCode[0];
+            if($fisrtNum==0 || $fisrtNum==3){
+                $marketType = 1;
+                $shares_code = 'sz'.$sharesCode;
+            }else if($fisrtNum==6){
+                $marketType = 2;
+                $shares_code = 'sh'.$sharesCode;
+            }else{
+                $marketType = 0;
+                $shares_code = '';
+            }
         }
+
+        //访问股票价格接口
+        $userModel = D('User');
+        $result = $userModel->sharesApi($shares_code);
+        if(is_array($result)){
+            $sharesName = $result['result'][0]['data']['name'];
+        }else{
+            $sharesName = '';
+        }
+        $arr = array(
+            'sharesName'=>$sharesName,
+            'market_type'=>$marketType,
+        );
+        exit(json_encode($arr));
     }
 }

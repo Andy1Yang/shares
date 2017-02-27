@@ -186,4 +186,32 @@ class ConfigController extends AdminController {
             $this->error('非法请求！');
         }
     }
+
+    //基本配置
+    public function base(){
+        $config = M('config');
+        if(IS_POST){
+            $stampDutyRate = I('stamp_duty_rate');
+            $transfer_fee_rate = I('transfer_fee_rate');
+            $entrust_fee_rate = I('entrust_fee_rate');
+            $commission_min = I('commission_min');
+            $session_time = I('session_time');
+            if(empty($stampDutyRate) || empty($transfer_fee_rate) || empty($commission_min) || empty($session_time)){
+                $this->error('配置参数不能为空！');
+            }
+            $config->where("name='STAMP_DUTY_RATE'")->save(array('value'=>$stampDutyRate));
+            $config->where("name='TRANSFER_FEE_RATE'")->save(array('value'=>$transfer_fee_rate));
+            $config->where("name='ENTRUST_FEE_RATE'")->save(array('value'=>$entrust_fee_rate));
+            $config->where("name='COMMISSION_MIN'")->save(array('value'=>$commission_min));
+            $config->where("name='SESSION_TIME'")->save(array('value'=>$session_time));
+            S('DB_CONFIG_DATA',null);
+            $this->success('配置保存成功！',"/admin.php?s=/config/base");
+
+        }else{
+            $map = " name='STAMP_DUTY_RATE' or name='TRANSFER_FEE_RATE' or name='ENTRUST_FEE_RATE' or name='COMMISSION_MIN' or name='SESSION_TIME' ";
+            $configList = $config->where($map)->select();
+            $this->assign('_configList',$configList);
+            $this->display();
+        }
+    }
 }

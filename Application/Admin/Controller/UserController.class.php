@@ -242,7 +242,7 @@ class UserController extends AdminController {
             $data['telephone'] = I('telephone');
             $data['level'] = I('level');
             $data['sex'] = I('sex');
-            $data['sort'] = I('sort');
+//            $data['sort'] = I('sort');
             $data['status'] = I('status');
             $udata = array();
             $udata['username'] = I('nickname');
@@ -300,7 +300,7 @@ class UserController extends AdminController {
             $data['telephone'] = I('telephone');
             $data['level'] = I('level');
             $data['sex'] = I('sex');
-            $data['sort'] = I('sort');
+//            $data['sort'] = I('sort');
             $udata['username'] = I('nickname');
             $udata['mobile'] = I('telephone');
             $bool = M('ucenter_member')->where('id='.$uid)->save($udata);
@@ -506,7 +506,7 @@ class UserController extends AdminController {
             $data['telephone2'] = I('telephone2');
             $data['sex'] = I('sex');
             $data['child'] = I('child');
-            $data['phone'] = I('phone');
+//            $data['phone'] = I('phone');
             $data['address'] = I('address');
             $data['sort'] = I('sort');
             $data['status'] = I('status');
@@ -572,7 +572,7 @@ class UserController extends AdminController {
             $data['telephone2'] = I('telephone2');
             $data['sex'] = I('sex');
             $data['child'] = I('child');
-            $data['phone'] = I('phone');
+//            $data['phone'] = I('phone');
             $data['address'] = I('address');
             $data['sort'] = I('sort');
             $data['status'] = I('status');

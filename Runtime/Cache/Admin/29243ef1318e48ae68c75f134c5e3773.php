@@ -52,7 +52,10 @@
                 <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
                             <ul class="side-sub-menu">
                                 <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                        <a class="item" href="<?php echo (U($menu["url"])); ?>">
+                                            <?php echo ($menu["title"]); ?>
+                                            <?php if($menu['have_summary'] == 1): ?><span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span><?php endif; ?>
+                                        </a>
                                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -100,8 +103,17 @@
     <div class="cf">
         <div class="fl">
             <a class="btn reflash" href="javascript:location.reload();">刷 新</a>
-            <!--button class="btn ajax-post" url="<?php echo U('changeStatus?method=resumeUser');?>" target-form="ids">导 出</button-->
+            <button class="btn ajax-post" url="<?php echo U('changeStatus?method=resumeUser');?>" target-form="ids">导 出</button>
             <a class="sell btn" href="javascript:;" >安全界限(%)</a>
+            营业部门：<select name="sales_id" id="sales_id">
+                <option value="">--请选择--</option>
+                <?php if(is_array($_salesList)): $i = 0; $__LIST__ = $_salesList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sa): $mod = ($i % 2 );++$i;?><option value="<?php echo ($sa["id"]); ?>" <?php if($sa['id'] == $sales_id): ?>selected='selected'<?php endif; ?>><?php echo ($sa["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>&nbsp;&nbsp;
+                客户：<select name="user_id" id="user_id">
+                <option value="0">--请选择--</option>
+                <?php if(is_array($_userList)): $i = 0; $__LIST__ = $_userList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$me): $mod = ($i % 2 );++$i;?><option style="display:none;" said="<?php echo ($me["sales_id"]); ?>" value="<?php echo ($me["id"]); ?>" <?php if($me['id'] == $user_id): ?>selected='selected'<?php endif; ?>><?php echo ($me["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            </select>
+                <a class="sch-btn" href="javascript:;" id="search" url="<?php echo U('index');?>" style="float:right;"><i class="btn-search"></i></a>
         </div>
     </div>
     <!-- 数据列表 -->
@@ -138,7 +150,7 @@
                     <td><?php echo ($vo["assess_interest"]); ?></td>
                     <td><?php echo ($vo["float_win_loss"]); ?></td>
                     <td><?php echo ($vo["win_loss_ratio"]); ?></td>
-                    <td style="font-size: 18px;text-align: center; font-weight: bold;color:<?php echo ($vo["color"]); ?>;background-color:<?php echo ($vo["background"]); ?>"><?php echo ($vo["safe_line"]); ?></td>
+                    <td style="text-align: center; font-weight: bold;color:<?php echo ($vo["color"]); ?>;<!--background-color:<?php echo ($vo["background"]); ?>-->"><?php echo ($vo["safe_line"]); ?></td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
                 <td colspan="13" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
@@ -290,6 +302,14 @@
             }else{
                 url += '?' + query;
             }
+            var sales_id = $('#sales_id').val();
+            var user_id = $('#user_id').val();
+            if(sales_id!=''){
+                url += '&sales_id='+sales_id;
+            }
+            if(user_id!='') {
+                url += '&user_id=' + user_id;
+            }
             window.location.href = url;
         });
         //回车搜索
@@ -308,6 +328,20 @@
         $('.close').click(function(){
             $('#sell').css('display','none');
         });
+        //营业部和客户联动
+        $('#sales_id').blur(function(){
+            var salesId= $(this).val();
+            $('#user_id option').css('display','none');
+            $('#user_id option[said='+salesId+']').css('display','block');
+            $('#user_id option:first').css('display','block');
+            $('#user_id').val(0);
+        });
+        var salesId = $('#sales_id').val();
+        if(salesId!=null && salesId!=''){
+            $('#user_id option').css('display','none');
+            $('#user_id option[said='+salesId+']').css('display','block');
+            $('#user_id option:first').css('display','block');
+        }
         //导航高亮
         highlight_subnav('<?php echo U('Ware/index');?>');
     </script>

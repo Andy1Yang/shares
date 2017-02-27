@@ -1,0 +1,50 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>基本配置</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+        <div class="form-item">
+            <label class="item-label">印花税税率<span class="check-tips">（‰）</span><span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="stamp_duty_rate" value="{$_configList[3]['value']}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">过户费费率<span class="check-tips">（‰）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="transfer_fee_rate" value="{$_configList[4]['value']}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">委托费费率<span class="check-tips">（‰）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="entrust_fee_rate" value="{$_configList[1]['value']}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">佣金最低金额</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="commission_min" value="{$_configList[0]['value']}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">系统锁屏时间(秒)</label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="session_time" value="{$_configList[2]['value']}">
+            </div>
+        </div>
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('Config/base')}');
+    </script>
+</block>

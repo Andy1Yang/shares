@@ -17,7 +17,7 @@
                 </volist>
             </select>&nbsp;&nbsp;
                 客户：<select name="user_id" id="user_id">
-                <option value="">--请选择--</option>
+                <option value="0">--请选择--</option>
                 <volist name="_userList" id="me">
                     <option style="display:none;" said="{$me.sales_id}" value="{$me.id}" <if condition="$me['id'] eq $user_id">selected='selected'</if>>{$me.name}</option>
                 </volist>
@@ -105,7 +105,7 @@
             var salesId= $(this).val();
             $('#user_id option').css('display','none');
             $('#user_id option[said='+salesId+']').css('display','block');
-            $('#user_id option:first').css('display','block');
+            $('#user_id option:first').css('display','block');  $('#user_id').val(0);
         });
         var salesId = $('#sales_id').val();
         if(salesId!=null && salesId!=''){

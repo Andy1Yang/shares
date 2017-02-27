@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -236,7 +236,7 @@ function update_tables($db, $prefix = ''){
     $sql = explode(";\n", $sql);
 
     //替换表前缀
-    $sql = str_replace(" `股票管理平台_", " `{$prefix}", $sql);
+    $sql = str_replace(" `股票配资管理平台_", " `{$prefix}", $sql);
 
     //开始安装
     show_msg('开始升级数据库...');

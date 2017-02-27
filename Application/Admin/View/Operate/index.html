@@ -133,7 +133,7 @@
                         <td>{$vo.status_text}</td>
                         <td>
                             <a href="{:U('Operate/edit?id='.$vo['id'])}" class="authorize">修改</a>
-                            <a href="{:U('Operate/del?id='.$vo['id'].'&uid='.$vo['user_id'])}" class="confirm ajax-get">删除</a>
+                            <a href="{:U('Operate/del?id='.$vo['id'].'&uid='.$vo['user_id'])}" class="confirm ajax-get">撤销</a>
                         </td>
                     </tr>
                 </volist>
@@ -165,8 +165,13 @@
         document.onmouseup=function(){
             if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
         document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        var mo = false;
         function move(o,e){
-            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            if(mo){
+                a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            }else{
+                return false;
+            }
         }
     </script>
     <div id="buy" style="height:330px;left: 310px; top: 173px;"  onmousedown="move(this,event)">
@@ -178,14 +183,15 @@
                     <tr>
                         <input type="hidden" name="user_id" value="{$_user_info.id}">
                         <td class="tdtiao">股票代码：</td>
-                        <td class="tiaotd2"> <input class='man buy_first' type="text" name="shares_code" value=""></td>
+                        <td class="tiaotd2"> <input class='man buy_first share_code' type="text" name="shares_code" value=""></td>
                         <td class="tdtiao">股票名称：</td>
-                        <td class="tiaotd2"> <input class='man' type="text" name="shares_name" value=""></td>
+                        <td class="tiaotd2"> <input class='man shares_name' type="text" name="shares_name" value=""></td>
                     </tr>
                     <tr>
                         <td class="tdtiao">股票市场：</td>
                         <td class="tiaotd2">
-                            <select name="market_type" id="">
+                            <select name="market_type" id="market_type">
+                                <option value="0">请选择</option>
                                 <option value="1">深市</option>
                                 <option value="2">沪市</option>
                             </select>
@@ -289,6 +295,12 @@
     <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
 
     <script type="text/javascript">
+        $('.black').mousemove(function(){
+            mo = true;
+        });
+        $('.black').mouseout(function(){
+            mo = false;
+        });
         //搜索功能
         $("#search").click(function(){
             var url = $(this).attr('url');
@@ -324,8 +336,8 @@
             var sell_code = $(this).parent().siblings().first().text();
             var sell_name = $(this).parent().siblings().eq(1).text();
             var sell_amount = $(this).parent().siblings().eq(4).text();
-            var interest = $(this).parent().siblings().eq(9).text();
-            var sell_cost = $(this).parent().siblings().eq(8).text();
+            var interest = $(this).parent().siblings().eq(10).text();
+            var sell_cost = $(this).parent().siblings().eq(9).text();
             var sell_id = $(this).attr('tag');
             var market_type = $(this).parent().siblings().eq(2).attr('tag');
             $('.sell_code').val(sell_code);
@@ -365,5 +377,13 @@
                 str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
             return str.replace(/零(千|百|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
         }
+        //股票名称股市自动化
+        $('.share_code').blur(function () {
+            var sharesCode = $(this).val();
+            $.post("{:U('self_shares')}",{'shares_code':sharesCode},function(data){
+                $('.shares_name').val(data.sharesName);
+                $('#market_type').val(data.market_type);
+            }, "json");
+        });
     </script>
 </block>

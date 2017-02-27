@@ -52,7 +52,10 @@
                 <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
                             <ul class="side-sub-menu">
                                 <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                        <a class="item" href="<?php echo (U($menu["url"])); ?>">
+                                            <?php echo ($menu["title"]); ?>
+                                            <?php if($menu['have_summary'] == 1): ?><span style="display:inline-block;width:10px;height:10px;background-color:red;border-radius: 10px;"></span><?php endif; ?>
+                                        </a>
                                     </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -248,8 +251,13 @@
         document.onmouseup=function(){
             if(!a)return;document.all?a.releaseCapture():window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);a="";};
         document.onmousemove=function (d){if(!a)return;if(!d)d=event;a.style.left=(d.clientX-b)+"px";a.style.top=(d.clientY-c)+"px";};
+        var mo = false;
         function move(o,e){
-            a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            if(mo){
+                a=o;document.all?a.setCapture():window.captureEvents(Event.MOUSEMOVE);b=e.clientX-parseInt(a.style.left);c=e.clientY-parseInt(a.style.top);
+            }else{
+                return false;
+            }
         }
     </script>
     <div id="buy" style="height:330px;left: 310px; top: 173px;"  onmousedown="move(this,event)">
@@ -261,14 +269,15 @@
                     <tr>
                         <input type="hidden" name="user_id" value="<?php echo ($_user_info["id"]); ?>">
                         <td class="tdtiao">股票代码：</td>
-                        <td class="tiaotd2"> <input class='man buy_first' type="text" name="shares_code" value=""></td>
+                        <td class="tiaotd2"> <input class='man buy_first share_code' type="text" name="shares_code" value=""></td>
                         <td class="tdtiao">股票名称：</td>
-                        <td class="tiaotd2"> <input class='man' type="text" name="shares_name" value=""></td>
+                        <td class="tiaotd2"> <input class='man shares_name' type="text" name="shares_name" value=""></td>
                     </tr>
                     <tr>
                         <td class="tdtiao">股票市场：</td>
                         <td class="tiaotd2">
-                            <select name="market_type" id="">
+                            <select name="market_type" id="market_type">
+                                <option value="0">请选择</option>
                                 <option value="1">深市</option>
                                 <option value="2">沪市</option>
                             </select>
@@ -463,6 +472,12 @@
     <script src="/Public/static/thinkbox/jquery.thinkbox.js"></script>
 
     <script type="text/javascript">
+        $('.black').mousemove(function(){
+            mo = true;
+        });
+        $('.black').mouseout(function(){
+            mo = false;
+        });
         //搜索功能
         $("#search").click(function(){
             var url = $(this).attr('url');
@@ -498,8 +513,8 @@
             var sell_code = $(this).parent().siblings().first().text();
             var sell_name = $(this).parent().siblings().eq(1).text();
             var sell_amount = $(this).parent().siblings().eq(4).text();
-            var interest = $(this).parent().siblings().eq(9).text();
-            var sell_cost = $(this).parent().siblings().eq(8).text();
+            var interest = $(this).parent().siblings().eq(10).text();
+            var sell_cost = $(this).parent().siblings().eq(9).text();
             var sell_id = $(this).attr('tag');
             var market_type = $(this).parent().siblings().eq(2).attr('tag');
             $('.sell_code').val(sell_code);
@@ -539,6 +554,14 @@
                 str += '零壹贰叁肆伍陆柒捌玖'.charAt(n.charAt(i)) + unit.charAt(i);
             return str.replace(/零(千|百|拾|角)/g, "零").replace(/(零)+/g, "零").replace(/零(万|亿|元)/g, "$1").replace(/(亿)万|壹(拾)/g, "$1$2").replace(/^元零?|零分/g, "").replace(/元$/g, "元整");
         }
+        //股票名称股市自动化
+        $('.share_code').blur(function () {
+            var sharesCode = $(this).val();
+            $.post("<?php echo U('self_shares');?>",{'shares_code':sharesCode},function(data){
+                $('.shares_name').val(data.sharesName);
+                $('#market_type').val(data.market_type);
+            }, "json");
+        });
     </script>
 
 </body>

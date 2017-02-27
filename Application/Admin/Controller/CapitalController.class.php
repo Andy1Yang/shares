@@ -86,7 +86,7 @@ class CapitalController extends AdminController {
         $happen_money = I('happen_money');
         $do_time = I('do_time');
         $data['user_id'] = $user_id;
-        $data['happen_money'] = $happen_money;
+        $data['happen_money'] = -$happen_money;
         $data['do_time'] = strtotime($do_time);;
         $data['remarks'] = I('remarks');
         $yuanArr = M('user')->where('id='.$user_id)->field('ensure_money,able_money,pledge')->find();
