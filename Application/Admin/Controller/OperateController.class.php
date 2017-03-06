@@ -59,21 +59,21 @@ class OperateController extends AdminController {
             $start2 = ($p2-1)*8;
             $this->assign('_allPage2',$allPage2);
             $this->assign('_p2',$p2);
-            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit {$start2},8";
-//            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 group by a.shares_code order by a.deal_time DESC,a.id DESC limit {$start2},8";
+            $sql_now = "select a.* from ss_deal_log as a where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC ";
+            $sql = "select a.*,sum(a.occupy_money) as total_occupy_money,sum(a.deal_amount) as total_buy_amount,FORMAT(avg(a.deal_price),2) as avg_price,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 group by a.shares_code order by a.deal_time DESC,a.id DESC limit {$start2},8";
             $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-//            echo $sql;exit;
-            $deal_list2 = $Model->query($sql);
-            int_to_string($deal_list2,$map);
+            $deal_list3 = $Model->query($sql);
+            $deal_list2 = $Model->query($sql_now);
+            int_to_string($deal_list3,$map);
             $userModel = D('User');
             $total_float_win_lost = 0;
             $tonight = strtotime(date('Y-m-d',time()));
             foreach($deal_list2 as $key=>$item){
-                if($item['deal_time']>$tonight){
-                    $deal_list2[$key]['is_sell'] = 2;
-                }else{
-                    $deal_list2[$key]['is_sell'] = 1;
-                }
+//                if($item['deal_time']>$tonight){
+//                    $deal_list2[$key]['is_sell'] = 2;
+//                }else{
+//                    $deal_list2[$key]['is_sell'] = 1;
+//                }
                 //访问股票价格接口
                 if($item['market_type']==1){
                     $shares_code = 'sz'.$item['shares_code'];
@@ -94,7 +94,7 @@ class OperateController extends AdminController {
                 $buy_time =  date('Y-m-d',$deal_list2[$key]['deal_time']);
                 $rate = $user_info['rate'];
                 $howDay = diffBetweenTwoDays($nowDay,$buy_time)+1;
-                $deal_list2[$key]['interest'] = round($rate*$howDay*$deal_list2[$key]['occupy_money']/10000,3);
+                $deal_list2[$key]['interest'] = round($rate*$howDay*$deal_list2[$key]['occupy_money']/10000,2);
                 $deal_list2[$key]['now_value'] = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['now_price'];//当前市值
                 //卖出费用
                 $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);//印花税
@@ -103,20 +103,44 @@ class OperateController extends AdminController {
                 $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);//佣金
                 $deal_list2[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
                 $total_invest = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['deal_price']+$deal_list2[$key]['buy_cost']+$deal_list2[$key]['interest']+$deal_list2[$key]['sell_cost'];
-                $deal_list2[$key]['float_win_loss'] = round($deal_list2[$key]['now_value']-$total_invest,3);//浮动盈亏
-                $deal_list2[$key]['win_loss_ratio'] = number_format($deal_list2[$key]['float_win_loss']/$user_info['ensure_money']*100,2);//盈亏比例
+                $deal_list2[$key]['float_win_loss'] = round($deal_list2[$key]['now_value']-$total_invest,2);//浮动盈亏
+//                $deal_list2[$key]['win_loss_ratio'] = number_format($deal_list2[$key]['float_win_loss']/$user_info['ensure_money']*100,2);//盈亏比例
                 $total_float_win_lost += $deal_list2[$key]['float_win_loss'];
+            }
+            foreach($deal_list3 as $key=>$item){
+                //访问股票价格接口
+                if($item['market_type']==1){
+                    $shares_code = 'sz'.$item['shares_code'];
+                }else if($item['market_type']==2){
+                    $shares_code = 'sh'.$item['shares_code'];
+                }
+                $result = $userModel->sharesApi($shares_code);
+                if(is_array($result)){
+                    $now_price = isset($result['result'][0]['data']['nowPri'])?$result['result'][0]['data']['nowPri']:0;
+                }else{
+                    $now_price = 0;
+                }
+                $deal_list3[$key]['now_price'] = $now_price;
+                $deal_list3[$key]['now_value'] = $deal_list3[$key]['total_buy_amount']*$deal_list3[$key]['now_price'];//当前市值
+                //卖出费用
+                $sell_stamp_duty = $userModel->count_stamp_duty($deal_list3[$key]['now_value']);//印花税
+                $sell_transfer_fee = $userModel->count_transfer_fee($deal_list3[$key]['now_value']);//过户费
+                $entrust_fee = $userModel->count_entrust_fee(1,$deal_list3[$key]['now_value']); //委托费
+                $commission = $userModel->count_commission($deal_list3[$key]['now_value'],$user_info['yongjin_rate']);//佣金
+                $deal_list3[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
             }
         }else{
             $user_info = array();
             $deal_list = array();
             $deal_list2 = array();
+            $deal_list3 = array();
         }
 
         $this->assign('_total_float_win_lost',$total_float_win_lost);
         $this->assign('_user_info',$user_info);
         $this->assign('_deal_list',$deal_list);
         $this->assign('_deal_list2',$deal_list2);
+        $this->assign('_deal_list3',$deal_list3);
 
         $this->meta_title = '交易管理';
         $this->display();
@@ -828,5 +852,103 @@ class OperateController extends AdminController {
             'market_type'=>$marketType,
         );
         exit(json_encode($arr));
+    }
+
+    public function  sellist(){
+        //获得左边营业部门和对应用户（账户人员）
+        $menu_list = D('User')->get_left_menu_sales(UID,'Operate');
+        $this->assign('_menu_list',$menu_list);
+
+        //获得用户信息
+        $menuArr = array_shift($menu_list);
+        $id = I('id',$menuArr[0]['id']);
+        $shares_code = I('shares_code');
+        if(!empty($id)){
+            $user_info = M('user')->where("id={$id}")->find();
+            //记得做分页
+            $deal_log = M('deal_log');
+            $map = array(
+                'status'=>array(
+                    '0'=>'禁用',
+                    '1'=>'正常',
+                    '2'=>'已结清'
+                ),
+                'do_type'=>array(
+                    1=>'买入',
+                    2=>'卖出',
+                ),
+                'market_type'=>array(
+                    1=>'深市',
+                    2=>'沪市',
+                )
+            );
+            //待卖出列表
+            $p2 = intval(I('p2',1));
+            $count = $deal_log->where("user_id={$id} and shares_code={$shares_code} and status=1 and do_type=1 and sell_status=1")->count('id');// 查询满足要求的总记录数
+            $allPage2 = ceil($count/20);
+            $start2 = ($p2-1)*20;
+            $this->assign('_allPage2',$allPage2);
+            $this->assign('_p2',$p2);
+            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and shares_code={$shares_code} and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit {$start2},20";
+//            $sql = "select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id={$id} and a.status=1 and a.do_type=1 and a.sell_status=1 group by a.shares_code order by a.deal_time DESC,a.id DESC limit {$start2},8";
+            $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
+//            echo $sql;exit;
+            $deal_list2 = $Model->query($sql);
+            int_to_string($deal_list2,$map);
+            $userModel = D('User');
+            $total_float_win_lost = 0;
+            $tonight = strtotime(date('Y-m-d',time()));
+            foreach($deal_list2 as $key=>$item){
+                if($item['deal_time']>$tonight){
+                    $deal_list2[$key]['is_sell'] = 2;
+                }else{
+                    $deal_list2[$key]['is_sell'] = 1;
+                }
+                //访问股票价格接口
+                if($item['market_type']==1){
+                    $shares_code = 'sz'.$item['shares_code'];
+                }else if($item['market_type']==2){
+                    $shares_code = 'sh'.$item['shares_code'];
+                }
+                $result = $userModel->sharesApi($shares_code);
+
+                if(is_array($result)){
+                    $now_price = isset($result['result'][0]['data']['nowPri'])?$result['result'][0]['data']['nowPri']:0;
+                }else{
+                    $now_price = 0;
+                }
+                $deal_list2[$key]['now_price'] = $now_price;
+                $deal_list2[$key]['buy_cost'] = round($deal_list2[$key]['stamp_duty']+$deal_list2[$key]['transfer_fee']+$deal_list2[$key]['entrust_fee']+$deal_list2[$key]['commission'],2);
+
+                $nowDay =  date('Y-m-d',time());
+                $buy_time =  date('Y-m-d',$deal_list2[$key]['deal_time']);
+                $rate = $user_info['rate'];
+                $howDay = diffBetweenTwoDays($nowDay,$buy_time)+1;
+                $deal_list2[$key]['interest'] = round($rate*$howDay*$deal_list2[$key]['occupy_money']/10000,3);
+                $deal_list2[$key]['now_value'] = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['now_price'];//当前市值
+                //卖出费用
+                $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);//印花税
+                $sell_transfer_fee = $userModel->count_transfer_fee($deal_list2[$key]['now_value']);//过户费
+                $entrust_fee = $userModel->count_entrust_fee(1,$deal_list2[$key]['now_value']); //委托费
+                $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);//佣金
+                $deal_list2[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
+                $total_invest = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['deal_price']+$deal_list2[$key]['buy_cost']+$deal_list2[$key]['interest']+$deal_list2[$key]['sell_cost'];
+                $deal_list2[$key]['float_win_loss'] = round($deal_list2[$key]['now_value']-$total_invest,3);//浮动盈亏
+                $deal_list2[$key]['win_loss_ratio'] = number_format($deal_list2[$key]['float_win_loss']/$user_info['ensure_money']*100,2);//盈亏比例
+                $total_float_win_lost += $deal_list2[$key]['float_win_loss'];
+            }
+        }else{
+            $user_info = array();
+            $deal_list = array();
+            $deal_list2 = array();
+        }
+
+        $this->assign('_total_float_win_lost',$total_float_win_lost);
+        $this->assign('_user_info',$user_info);
+        $this->assign('_deal_list',$deal_list);
+        $this->assign('_deal_list2',$deal_list2);
+
+        $this->meta_title = '交易管理';
+        $this->display();
     }
 }

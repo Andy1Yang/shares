@@ -21,6 +21,7 @@
 <body>
     <!-- 头部 -->
     <div class="header">
+        
         <!-- Logo -->
         <span class="logo yhy_logo">股票管理平台</span>
         <!-- /Logo -->
@@ -30,7 +31,9 @@
             <?php if(is_array($__MENU__["main"])): $i = 0; $__LIST__ = $__MENU__["main"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($menu["class"]) && ($menu["class"] !== ""))?($menu["class"]):''); ?>"><a href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
         <!-- /主导航 -->
+        
 
+        
         <!-- 用户栏 -->
         <div class="user-bar">
             <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
@@ -41,6 +44,7 @@
                 <li><a href="<?php echo U('Public/logout');?>">退出</a></li>
             </ul>
         </div>
+        
     </div>
     <!-- /头部 -->
 
@@ -125,39 +129,37 @@
                 <th class="">股票名称</th>
                 <th class="">市场</th>
                 <th class="">买入数量</th>
-                <th class="">持仓数量</th>
-                <th class="">可卖数量</th>
+                <!--<th class="">持仓数量</th>-->
+                <!--<th class="">可卖数量</th>-->
                 <th class="">成交均价</th>
                 <th class="">当前价格</th>
-                <th class="">买入费用</th>
+                <!--<th class="">买入费用</th>-->
                 <th class="">卖出费用</th>
-                <th class="">利息费用</th>
+                <!--<th class="">利息费用</th>-->
                 <th class="">市值</th>
-                <th class="">浮动盈亏</th>
-                <th class="">盈亏比例</th>
+                <!--<th class="">浮动盈亏</th>-->
+                <!--<th class="">盈亏比例</th>-->
                 <th class="">操作</th>
             </tr>
             </thead>
             <tbody>
-            <?php if(!empty($_deal_list2)): if(is_array($_deal_list2)): $i = 0; $__LIST__ = $_deal_list2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+            <?php if(!empty($_deal_list3)): if(is_array($_deal_list3)): $i = 0; $__LIST__ = $_deal_list3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                         <td><?php echo ($vo["shares_code"]); ?> </td>
                         <td><?php echo ($vo["shares_name"]); ?></td>
                         <td tag="<?php echo ($vo["market_type"]); ?>"><?php echo ($vo["market_type_text"]); ?></td>
-                        <td><?php echo ($vo["deal_amount"]); ?></td>
-                        <td><?php echo ($vo["able_sell_amount"]); ?></td>
-                        <td><?php if($vo['is_sell'] == 1): echo ($vo["able_sell_amount"]); else: ?>0<?php endif; ?></td>
-                        <td><?php echo ($vo["deal_price"]); ?></td>
+                        <td><?php echo ($vo["total_buy_amount"]); ?></td>
+                        <!--<td><?php echo ($vo["able_sell_amount"]); ?></td>-->
+                        <!--<td><?php if($vo['is_sell'] == 1): echo ($vo["able_sell_amount"]); else: ?>0<?php endif; ?></td>-->
+                        <td><?php echo ($vo["avg_price"]); ?></td>
                         <td><?php echo ($vo["now_price"]); ?></td>
-                        <td><?php echo ($vo["buy_cost"]); ?></td>
+                        <!--<td><?php echo ($vo["buy_cost"]); ?></td>-->
                         <td><?php echo ($vo["sell_cost"]); ?></td>
-                        <td><?php echo ($vo["interest"]); ?></td>
+                        <!--<td><?php echo ($vo["interest"]); ?></td>-->
                         <td><?php echo ($vo["now_value"]); ?></td>
-                        <td><span <?php if((0 > $vo['float_win_loss'])): ?>style="color:red;"<?php endif; ?>><?php echo ($vo["float_win_loss"]); ?></span></td>
-                        <td><span <?php if((0 > $vo['win_loss_ratio'])): ?>style="color:red;"<?php endif; ?>><?php echo ($vo["win_loss_ratio"]); ?></span></td>
+                        <!--<td><span <?php if((0 > $vo['float_win_loss'])): ?>style="color:red;"<?php endif; ?>><?php echo ($vo["float_win_loss"]); ?></span></td>-->
+                        <!--<td><span <?php if((0 > $vo['win_loss_ratio'])): ?>style="color:red;"<?php endif; ?>><?php echo ($vo["win_loss_ratio"]); ?></span></td>-->
                         <td>
-                            <?php if($vo['is_sell'] == 1): ?><a class="sell" style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;"  href="javascript:;" tag="<?php echo ($vo["id"]); ?>">卖出</a>
-                                <?php else: ?>
-                                <a style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;"  href="javascript:;" >暂不可卖</a><?php endif; ?>
+                            <a class="sell" style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;"  href="<?php echo U('Operate/sellist?id='.$_user_info['id'].'&shares_code='.$vo['shares_code']);?>" >明细</a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -328,53 +330,6 @@
         </div>
     </div>
 
-    <div id="sell" style="height:270px;left: 310px; top: 173px;" onmousedown="move(this,event)">
-        <p class="black"><a href="javascript:;" class="close">X</a></p>
-        <div class="neikuan">
-            <label class="item-label" style="font-weight: bold;">交易管理-卖出</label>
-            <form action="<?php echo U('sell');?>" class="doposit" method="post" id="selform">
-                <table cellpadding="80" cellspacing="80">
-                    <tr>
-                        <input type="hidden" class="sell_id" name="id" value="">
-                        <input type="hidden" class="interest" name="interest" value="">
-                        <input type="hidden" class="sell_cost" name="sell_cost" value="">
-                        <input type="hidden" class="market_type" name="market_type" value="">
-                        <td class="tdtiao">股票代码：</td>
-                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_code' type="text" name="shares_code" value=""></td>
-                        <td class="tdtiao">股票名称：</td>
-                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_name' type="text" name="shares_name" value=""></td>
-                    </tr>
-                    <tr>
-                        <td class="tdtiao">卖出数量：</td>
-                        <td class="tiaotd2"> <input class='man sell_first' type="text" name="sell_amount" value=""></td>
-                        <td class="tdtiao">可卖数量：</td>
-                        <td class="tiaotd2"> <input disabled="disabled" class='man sell_amount' type="text" name="able_amount" value=""></td>
-                    </tr>
-                    <tr>
-                        <td class="tdtiao">卖出价格：</td>
-                        <td class="tiaotd2">
-                            <div class="big_word_div"></div>
-                            <input class='man big_word' type="text" name="sell_price" value="">
-                        </td>
-                        <td class="tdtiao">卖出时间：</td>
-                        <td class="tiaotd2"> <input class='man' type="text" name="sell_time" value="<?=date('Y-m-d H:i:s',time())?>"></td>
-                    </tr>
-                    <!--tr>
-                        <td class="tdtiao">免息金额：</td>
-                        <td class="tiaotd2"> <input class='man' type="text" name="free_interest" value="0"></td>
-                        <td class="tdtiao"></td>
-                        <td class="tiaotd2"> <input class='man' type="text" name="" value=""></td>
-                    </tr-->
-                    <tr>
-                        <td class="tiaotd3" colspan="4">
-                            <input style="margin-right: 40px;" class='sub' type="submit" name="sub" value="提交">
-                            <input style="margin-left: 40px;" class='sub' type="reset" name="" value="重置">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-    </div >
 
         </div>
         <div class="cont-ft">
@@ -509,25 +464,6 @@
 //        $('#buyform').on('submit',function(event){
 //            event.preventDefault();
 //        });
-        //卖出
-        $('.sell').click(function(){
-            $('#sell').css('display','block');
-            $('.sell_first').focus();
-            var sell_code = $(this).parent().siblings().first().text();
-            var sell_name = $(this).parent().siblings().eq(1).text();
-            var sell_amount = $(this).parent().siblings().eq(4).text();
-            var interest = $(this).parent().siblings().eq(10).text();
-            var sell_cost = $(this).parent().siblings().eq(9).text();
-            var sell_id = $(this).attr('tag');
-            var market_type = $(this).parent().siblings().eq(2).attr('tag');
-            $('.sell_code').val(sell_code);
-            $('.sell_name').val(sell_name);
-            $('.sell_amount').val(sell_amount);
-            $('.sell_id').val(sell_id);
-            $('.interest').val(interest);
-            $('.sell_cost').val(sell_cost);
-            $('.market_type').val(market_type);
-        });
         //关闭弹窗
         $('.close').click(function(){
             $('#buy').css('display','none');

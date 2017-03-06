@@ -29,6 +29,14 @@ function is_login(){
         return session('user_auth_sign') == data_auth_sign($user) ? $user['uid'] : 0;
     }
 }
+function is_login2(){
+    $user = session('user_auth2');
+    if (empty($user)) {
+        return 0;
+    } else {
+        return $user;
+    }
+}
 
 /**
  * 检测当前用户是否为管理员

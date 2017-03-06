@@ -1,0 +1,1927 @@
+[ 2017-01-24T07:40:04+08:00 ] 58.23.50.190 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000856s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+
+[ 2017-01-24T07:40:05+08:00 ] 58.23.50.190 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000982s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2017-01-24T08:30:39+08:00 ] 42.156.251.187 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+
+[ 2017-01-24T15:11:08+08:00 ] 211.97.128.214 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000963s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-01-24T15:11:08+08:00 ] 211.97.128.214 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000906s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-01-24T15:11:27+08:00 ] 101.226.51.226 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000898s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-01-24T15:11:31+08:00 ] 211.97.128.214 /admin.php?s=/Public/verify.html&random=0.22780135580016048
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000980s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-01-24T15:11:44+08:00 ] 211.97.128.214 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000973s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Constant UC_AUTH_KEY already defined /data/newproject/Application/User/Conf/config.php 第 17 行.
+NOTIC: [8] Undefined index: lite /data/newproject/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+
+[ 2017-01-24T15:11:44+08:00 ] 211.97.128.214 /admin.php?s=/Public/verify.html&random=0.8909097602895425
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000938s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2017-01-24T15:11:44+08:00 ] 211.97.128.214 /admin.php?s=/Public/verify.html&random=0.9455552672098995
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000885s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-01-24T15:11:53+08:00 ] 211.97.128.214 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000858s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000346s ]
+
+[ 2017-01-24T15:11:53+08:00 ] 211.97.128.214 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000842s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000296s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-01-24T15:12:19+08:00 ] 211.97.128.214 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000955s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] Constant UC_AUTH_KEY already defined /data/newproject/Application/User/Conf/config.php 第 17 行.
+NOTIC: [8] Undefined index: lite /data/newproject/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_action` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_action_log` [ RunTime:0.0004s ]
+SQL: INSERT INTO `ss_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','3546382550','member','1','1485241939','admin在2017-01-24 15:12登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 1 /data/newproject/Application/Common/Common/function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /data/newproject/Application/Common/Common/function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1485155539 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ss_member` SET `login`=`login`+1,`last_login_time`='1485241939',`last_login_ip`='3546382550' WHERE `uid` = 1 [ RunTime:0.0005s ]
+
+[ 2017-01-24T15:12:19+08:00 ] 211.97.128.214 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000835s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY sort desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2017-01-24T15:12:29+08:00 ] 112.65.193.15 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000968s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-01-24T15:12:29+08:00 ] 112.65.193.15 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000907s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-01-24T15:12:58+08:00 ] 211.97.128.214 /admin.php?s=/User/sales_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000921s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/sales_list%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ss_sales` ORDER BY sort desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8] Undefined variable: _page /data/newproject/Runtime/Cache/Admin/659e56f9e206b04afcd62df3539761c7.php 第 143 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/659e56f9e206b04afcd62df3539761c7.php 第 150 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-01-24T15:13:06+08:00 ] 211.97.128.214 /admin.php?s=/AuthManager/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000930s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%AuthManager/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_auth_group` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_auth_group` WHERE `module` = 'admin' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `id`,`module`,`type`,`title`,`description`,`status`,`rules` FROM `ss_auth_group` WHERE `module` = 'admin' ORDER BY id asc LIMIT 0,10   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/0e570eb4d82317bfe00583e8398288ce.php 第 153 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-01-24T15:13:11+08:00 ] 211.97.128.214 /admin.php?s=/User/user_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000838s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/user_add%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `uid`,`nickname` FROM `ss_member` WHERE ( 1=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( 1=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/18106bcf3c0e3652fed3105d8ade616d.php 第 274 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000307s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2017-01-24T15:13:15+08:00 ] 101.226.33.219 /admin.php?s=/User/sales_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000870s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-01-24T15:13:15+08:00 ] 101.226.33.219 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000367s ]
+
+[ 2017-01-24T15:13:21+08:00 ] 211.97.128.214 /admin.php?s=/User/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/user_list%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`nickname` FROM `ss_member`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ss_user` ORDER BY sort desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: _page /data/newproject/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 160 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 168 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-01-24T15:13:21+08:00 ] 180.153.212.13 /admin.php?s=/User/user_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001103s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+
+[ 2017-01-24T15:13:21+08:00 ] 180.153.212.13 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000844s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-01-24T15:13:24+08:00 ] 211.97.128.214 /admin.php?s=/Capital/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Capital/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_capital_log` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_capital_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_capital_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/bd1add356aa3883bb93cb4d9e0cd802b.php 第 221 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-01-24T15:13:30+08:00 ] 180.153.201.15 /admin.php?s=/User/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+
+[ 2017-01-24T15:13:30+08:00 ] 180.153.201.15 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000915s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000342s ]
+
+[ 2017-01-24T15:13:33+08:00 ] 211.97.128.214 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000939s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0008s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-01-24T15:13:42+08:00 ] 101.226.125.111 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000867s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000352s ]
+
+[ 2017-01-24T15:13:42+08:00 ] 101.226.125.111 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000901s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+
+[ 2017-01-24T15:14:11+08:00 ] 211.97.128.214 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000904s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-01-24T15:14:19+08:00 ] 211.97.128.214 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000964s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000311s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2017-01-24T15:25:53+08:00 ] 110.80.15.82 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000850s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+
+[ 2017-01-24T15:25:53+08:00 ] 110.80.15.82 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000839s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ss_addons` [ RunTime:0.0004s ]
+SQL: SELECT `config` FROM `ss_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_document` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_category` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_model` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.009108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.008487s ]
+SQL: SELECT `config` FROM `ss_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.072765s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002431s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.061740s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.064046s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.064041s ]
+SQL: SELECT `config` FROM `ss_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.075347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001255s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.066008s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001937s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.074559s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001461s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.066210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-01-24T15:25:57+08:00 ] 110.80.15.82 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000871s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY sort desc LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-01-24T15:26:01+08:00 ] 110.80.15.82 /admin.php?s=/Public/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000913s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003950s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000299s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-01-24T15:26:02+08:00 ] 110.80.15.82 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000895s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-01-24T15:26:03+08:00 ] 110.80.15.82 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000933s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-01-24T15:26:15+08:00 ] 110.80.15.82 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Constant UC_AUTH_KEY already defined /data/newproject/Application/User/Conf/config.php 第 17 行.
+NOTIC: [8] Undefined index: lite /data/newproject/ThinkPHP/Library/Think/Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_action` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_action_log` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ss_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','1850740562','member','1','1485242775','admin在2017-01-24 15:26登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 1 /data/newproject/Application/Common/Common/function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /data/newproject/Application/Common/Common/function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1485156375 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ss_member` SET `login`=`login`+1,`last_login_time`='1485242775',`last_login_ip`='1850740562' WHERE `uid` = 1 [ RunTime:0.0005s ]
+
+[ 2017-01-24T15:26:15+08:00 ] 110.80.15.82 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000850s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY sort desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000388s ]
+
+[ 2017-01-24T15:26:32+08:00 ] 110.80.15.82 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000894s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2017-01-24T15:27:36+08:00 ] 110.80.15.82 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000892s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-01-24T15:27:39+08:00 ] 110.80.15.82 /admin.php?s=/Account/un_deal_list/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000904s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/un_deal_list%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 131 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 131  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 131 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '结算管理' AND `pid` = 131 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=2  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=2 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/b79bc176040725339526984a1f90edc7.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-01-24T15:27:42+08:00 ] 110.80.15.82 /admin.php?s=/Account/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000901s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000387s ]
+
+[ 2017-01-24T15:27:57+08:00 ] 110.80.15.82 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000867s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0011s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2017-01-24T15:27:59+08:00 ] 110.80.15.82 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000885s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2017-01-24T15:28:00+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001002s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-01-24T15:28:03+08:00 ] 110.80.15.82 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000934s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_config` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ss_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/e915606f4666252950bacf14eab57f78.php 第 138 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2017-01-24T15:28:04+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000942s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-01-24T15:28:19+08:00 ] 110.80.15.82 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000871s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2017-01-24T15:32:21+08:00 ] 110.80.15.82 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000841s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2017-01-24T15:32:29+08:00 ] 110.80.15.82 /admin.php?s=/Operate/edit/id/51.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000856s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/edit%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 130 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 130  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 130 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '交易管理' AND `pid` = 130 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( id=51 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`nickname` FROM `ss_member`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/9e946945a002a9e6e97f396667e54322.php 第 199 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000345s ]
+
+[ 2017-01-24T15:32:33+08:00 ] 110.80.15.82 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000869s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0005s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000382s ]
+
+[ 2017-01-24T15:32:36+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000951s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2017-01-24T15:32:38+08:00 ] 110.80.15.82 /admin.php?s=/Report/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000900s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: sell_transfer_fee /data/newproject/Application/Admin/Controller/ReportController.class.php 第 50 行.
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/newproject/Application/Admin/Controller/ReportController.class.php 第 28 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 60 行.
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 64 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=4 and sell_status=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined variable: _page /data/newproject/Runtime/Cache/Admin/3c1dc1b7660b78e2eac45df80b6ab038.php 第 149 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/3c1dc1b7660b78e2eac45df80b6ab038.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-01-24T15:32:49+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000868s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2017-01-24T15:33:02+08:00 ] 110.80.15.82 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000830s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2017-01-24T15:33:04+08:00 ] 110.80.15.82 /admin.php?s=/Account/un_deal_list/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000876s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/un_deal_list%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 131 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 131  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 131 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '结算管理' AND `pid` = 131 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=2  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=2 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/b79bc176040725339526984a1f90edc7.php 第 164 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2017-01-24T15:33:05+08:00 ] 110.80.15.82 /admin.php?s=/Account/index/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000850s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2017-01-24T15:33:31+08:00 ] 110.80.15.82 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000927s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0001s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,4 [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: sell_cost /data/newproject/Application/Admin/Controller/OperateController.class.php 第 91 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/660d29c550558b2d159f6936d1031408.php 第 348 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000309s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2017-01-24T15:33:32+08:00 ] 110.80.15.82 /admin.php?s=/Account/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000889s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Account/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0001s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE ( user_id=2 and status=3  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select a.*,b.nickname from ss_summary_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=3 order by a.do_time DESC,a.id DESC limit 0,20 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Undefined index: uid /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 153 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/c4921982ccba1d7effaada457f8c4abd.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2017-01-24T15:33:33+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2017-01-24T15:34:56+08:00 ] 110.80.15.82 /admin.php?s=/Report/deal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000919s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/deal%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name` FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_summary_log` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_summary_log` WHERE (  status=3  ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: select a.*,b.name from ss_summary_log as a left join ss_user as b on a.user_id=b.id where a.status=3 and 1=1 and a.sell_time>=1485187200 and a.sell_time<=1485273600 order by a.do_time DESC,a.id DESC limit 0,40 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: sales_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 108 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Undefined variable: user_id /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 112 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/d76c030ce5fde08ee0636a5d479a12c4.php 第 185 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2017-01-24T15:34:59+08:00 ] 110.80.15.82 /admin.php?s=/Report/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000934s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Report/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 132 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 132  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 132 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '报表管理' AND `pid` = 132 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: sell_transfer_fee /data/newproject/Application/Admin/Controller/ReportController.class.php 第 50 行.
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /data/newproject/Application/Admin/Controller/ReportController.class.php 第 28 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 60 行.
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+NOTIC: [2] Division by zero /data/newproject/Application/Admin/Controller/ReportController.class.php 第 64 行.
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=4 and sell_status=1 )  [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: float_ensure_money /data/newproject/Application/Admin/Controller/ReportController.class.php 第 61 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Undefined variable: _page /data/newproject/Runtime/Cache/Admin/3c1dc1b7660b78e2eac45df80b6ab038.php 第 149 行.
+NOTIC: [8] Use of undefined constant 股票管理平台_VERSION - assumed '股票管理平台_VERSION' /data/newproject/Runtime/Cache/Admin/3c1dc1b7660b78e2eac45df80b6ab038.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+

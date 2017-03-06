@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><?php echo ($meta_title); ?>|股票管理平台</title>
+    <title><?php echo ($meta_title); ?>|股票配资管理平台</title>
     <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="/Public/Admin/css/base.css" media="all">
     <link rel="stylesheet" type="text/css" href="/Public/Admin/css/common.css" media="all">
@@ -14,7 +14,6 @@
     <![endif]--><!--[if gte IE 9]><!-->
     <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/Public/Admin/js/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="/Public/Admin/js/PCASClass.js"></script>
     <!--<![endif]-->
     
 </head>
@@ -22,7 +21,7 @@
     <!-- 头部 -->
     <div class="header">
         <!-- Logo -->
-        <span class="logo yhy_logo">股票管理平台</span>
+        <span class="logo yhy_logo">股票配资管理系统</span>
         <!-- /Logo -->
 
         <!-- 主导航 -->
@@ -49,23 +48,16 @@
         <!-- 子导航 -->
         
             <div id="subnav" class="subnav">
-                <?php if(isset($_menu_list)): if(is_array($_menu_list)): $i = 0; $__LIST__ = $_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i; if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
-                            <ul class="side-sub-menu">
-                                <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
-                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </ul><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                <?php else: ?>
-                    <?php if(!empty($_extra_menu)): ?>
-                        <?php echo extra_menu($_extra_menu,$__MENU__); endif; ?>
-                    <?php if(is_array($__MENU__["child"])): $i = 0; $__LIST__ = $__MENU__["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i;?><!-- 子导航 -->
-                        <?php if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
-                            <ul class="side-sub-menu">
-                                <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                        <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
-                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </ul><?php endif; ?>
-                        <!-- /子导航 --><?php endforeach; endif; else: echo "" ;endif; endif; ?>
+                <?php if(!empty($_extra_menu)): ?>
+                    <?php echo extra_menu($_extra_menu,$__MENU__); endif; ?>
+                <?php if(is_array($__MENU__["child"])): $i = 0; $__LIST__ = $__MENU__["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i;?><!-- 子导航 -->
+                    <?php if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
+                        <ul class="side-sub-menu">
+                            <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
+                                    <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </ul><?php endif; ?>
+                    <!-- /子导航 --><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
         
         <!-- /子导航 -->
@@ -145,8 +137,8 @@
         </div>
         <div class="cont-ft">
             <div class="copyright">
-                <div class="fl">股票管理平台</div>
-                <div class="fr">V<?php echo (股票管理平台_VERSION); ?></div>
+                <div class="fl">感谢使用<a href="http://www.股票配资管理平台.cn" target="_blank">股票配资管理平台</a>管理平台</div>
+                <div class="fr">V<?php echo (股票配资管理平台_VERSION); ?></div>
             </div>
         </div>
     </div>

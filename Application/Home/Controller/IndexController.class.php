@@ -18,16 +18,22 @@ class IndexController extends HomeController {
 
 	//系统首页
     public function index(){
+        if(is_login2()){
+            echo "<script>location.href='/admin.php?s=/Fornt/index.html';</script>";exit;
+        }else{
+            echo "<script>location.href='/index.php?s=/Home/User/login.html';</script>";exit;
+        }
 
-        $category = D('Category')->getTree();
-        $lists    = D('Document')->lists(null);
 
-        $this->assign('category',$category);//栏目
-        $this->assign('lists',$lists);//列表
-        $this->assign('page',D('Document')->page);//分页
-
-                 
-        $this->display();
+//        $category = D('Category')->getTree();
+//        $lists    = D('Document')->lists(null);
+//
+//        $this->assign('category',$category);//栏目
+//        $this->assign('lists',$lists);//列表
+//        $this->assign('page',D('Document')->page);//分页
+//
+//
+//        $this->display();
     }
 
 }

@@ -9,9 +9,9 @@
 			<div class="sys-info">
 				<table>
 					<tr>
-						<th>股票管理平台版本</th>
-						<td><?php echo (股票管理平台_VERSION); ?>&nbsp;&nbsp;&nbsp;
-							<?php if(!empty($addons_config["new_version"])): ?><a href="http://www.股票管理平台.cn" target="_blank">
+						<th>股票配资管理平台版本</th>
+						<td><?php echo (); ?>&nbsp;&nbsp;&nbsp;
+							<?php if(!empty($addons_config["new_version"])): ?><a href="http://www.股票配资管理平台.cn" target="_blank">
 									发现新版本[<?php echo ($addons_config["new_version"]); ?>]
 								</a>&nbsp;&nbsp;&nbsp;&nbsp;
 								<a href="<?php echo U('/update/index');?>" target="_blank">

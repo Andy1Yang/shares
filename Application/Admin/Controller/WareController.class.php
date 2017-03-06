@@ -69,6 +69,7 @@ class WareController extends AdminController {
             $assess_cost = 0;
             $assess_interest = 0;
             $occupy_money = 0;
+            $total_data = array();
             foreach($dealArr as $va){
                 if($va['market_type']==1){
                     $shares_code = 'sz'.$va['shares_code'];
@@ -122,6 +123,7 @@ class WareController extends AdminController {
                 $user_list[$key]['color'] = 'red';
                 $user_list[$key]['background'] = '#9F0F05';
             }
+//            $total_data[0] += 
         }
         $this->assign('_red',$redNum);
         $this->assign('_blue',$blueNum);

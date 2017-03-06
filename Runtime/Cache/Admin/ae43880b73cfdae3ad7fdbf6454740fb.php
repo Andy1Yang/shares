@@ -21,6 +21,7 @@
 <body>
     <!-- 头部 -->
     <div class="header">
+        
         <!-- Logo -->
         <span class="logo yhy_logo">股票管理平台</span>
         <!-- /Logo -->
@@ -30,7 +31,9 @@
             <?php if(is_array($__MENU__["main"])): $i = 0; $__LIST__ = $__MENU__["main"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($menu["class"]) && ($menu["class"] !== ""))?($menu["class"]):''); ?>"><a href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
         <!-- /主导航 -->
+        
 
+        
         <!-- 用户栏 -->
         <div class="user-bar">
             <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
@@ -41,6 +44,7 @@
                 <li><a href="<?php echo U('Public/logout');?>">退出</a></li>
             </ul>
         </div>
+        
     </div>
     <!-- /头部 -->
 
@@ -106,6 +110,18 @@
                 <input type="text" class="text input-large" name="name" value="<?php echo ($_res["name"]); ?>">
                 <input type="hidden" class="text input-large" name="is_eidt" value="1">
                 <input type="hidden" class="text input-large" name="id" value="<?php echo ($_res["id"]); ?>">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">重置密码</label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="password" value="">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">重复密码</label>
+            <div class="controls">
+                <input type="password" class="text input-large" name="repassword" value="">
             </div>
         </div>
         <div class="form-item">

@@ -21,6 +21,7 @@
 <body>
     <!-- 头部 -->
     <div class="header">
+        <block name="logo">
         <!-- Logo -->
         <span class="logo yhy_logo">股票管理平台</span>
         <!-- /Logo -->
@@ -32,7 +33,9 @@
             </volist>
         </ul>
         <!-- /主导航 -->
+        </block>
 
+        <block name="userinfo">
         <!-- 用户栏 -->
         <div class="user-bar">
             <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
@@ -43,6 +46,7 @@
                 <li><a href="{:U('Public/logout')}">退出</a></li>
             </ul>
         </div>
+        </block>
     </div>
     <!-- /头部 -->
 

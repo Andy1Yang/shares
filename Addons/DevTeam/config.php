@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -11,7 +11,7 @@ return array(
 	'title'=>array(//配置在表单中的键名 ,这个会是config[title]
 		'title'=>'显示标题:',//表单的文字
 		'type'=>'text',		 //表单的类型：text、textarea、checkbox、radio、select等
-		'value'=>'股票管理平台开发团队',			 //表单的默认值
+		'value'=>'股票配资管理平台开发团队',			 //表单的默认值
 	),
 	'width'=>array(
 		'title'=>'显示宽度:',

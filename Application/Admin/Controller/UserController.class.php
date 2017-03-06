@@ -489,6 +489,12 @@ class UserController extends AdminController {
     //账户登记
     public function user_add(){
         if(IS_POST){
+            $password = I('password');
+            $repassword = I('repassword');
+            if($password!=$repassword){
+                $this->error('密码必须一致！');
+            }
+            $data['password'] = md5($password);
             $data['name'] = I('name');
             $data['pledge'] = I('pledge');
             $data['rate'] = I('rate');
@@ -525,6 +531,11 @@ class UserController extends AdminController {
             $area2 = I('area2');
             $data['jiguan'] = $province1.'#'.$city1.'#'.$area1;
             $data['hukou'] = $province2.'#'.$city2.'#'.$area2;
+            //用户名唯一
+            $userArr = M('user')->where("name='{$data['name']}'")->find();
+            if($userArr){
+                $this->error('此用户名已注册！');
+            }
             if(!M('user')->add($data)){
                 $this->error('账户添加失败！');
             } else {
@@ -555,6 +566,14 @@ class UserController extends AdminController {
         $id = I('id');
         $is_eidt = I('is_eidt');
         if(!empty($is_eidt)){
+            $password = I('password');
+            $repassword = I('repassword');
+            if($password!=$repassword){
+                $this->error('密码必须一致！');
+            }
+            if(!empty($password)){
+                $data['password'] = md5($password);
+            }
             $data['name'] = I('name');
             $data['pledge'] = I('pledge');
             $data['rate'] = I('rate');
@@ -590,7 +609,11 @@ class UserController extends AdminController {
             $area2 = I('area2');
             $data['jiguan'] = $province1.'#'.$city1.'#'.$area1;
             $data['hukou'] = $province2.'#'.$city2.'#'.$area2;
-
+            //用户名唯一
+            $userArr = M('user')->where("name='{$data['name']}' and id<>{$id}")->find();
+            if($userArr){
+                $this->error('此用户名已注册！');
+            }
             $bool = M('user')->where('id='.$id)->save($data);
             if(!$bool){
                 $this->error('账户修改失败！');
@@ -651,6 +674,68 @@ class UserController extends AdminController {
             }else{
                 $this->error('账户删除失败！');
             }
+        }
+    }
+
+    public function apply(){
+        //先查权限
+        $user_info = M('member')->where('uid='.UID)->find();
+        if($user_info['level']==1){//超级管理员
+            $where = '1=1';
+            $salesList = M('sales')->where('status=1')->field('id,title')->select();
+            $userList = M('user')->where('status=1')->field('id,name,sales_id')->select();
+            $this->assign('_salesList',$salesList);
+            $this->assign('_userList',$userList);
+        }else if($user_info['level']==2){ //主管
+            $uidList = M('member')->where('sales_id='.$user_info['sales_id'])->field('uid')->select();
+            $uidStr = '';
+            foreach($uidList as $item){
+                $uidStr .= $item['uid'].',';
+            }
+            $uidStr = trim($uidStr,',');
+            $where = " a.member_id in ({$uidStr})";
+            $userList = M('user')->where('status=1 and sales_id='.$user_info['sales_id'])->field('id,name,sales_id')->select();
+            $this->assign('_userList',$userList);
+        }else{//普通业务员
+            $where = ' a.member_id='.UID;
+            $userList = M('user')->where('status=1 and member_id='.$user_info['uid'])->field('id,name,sales_id')->select();
+            $this->assign('_userList',$userList);
+        }
+
+        $apply_log = M('apply_log as a');
+        $count = $apply_log->where($where.' and a.status<>3')->count('id');// 查询满足要求的总记录数
+        $Page       = new \Think\Page($count,40);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show       = $Page->show();// 分页显示输出
+        $this->assign('_page',$show);
+        $sql = "select a.*,b.name from ss_apply_log as a left join ss_user as b on a.user_id=b.id where {$where} and a.status<>3 order by a.status asc,a.add_time desc limit {$Page->firstRow},{$Page->listRows}";
+        $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
+        $apply_list = $Model->query($sql);
+        $map = array(
+            'status'=>array(
+                '1'=>'受理中',
+                '2'=>'已处理'
+            ),
+            'do_type'=>array(
+                1=>'买入',
+                2=>'卖出',
+            ),
+            'market_type'=>array(
+                1=>'深市',
+                2=>'沪市',
+            )
+        );
+        int_to_string($apply_list,$map);
+        $this->assign('_apply_list',$apply_list);
+        $this->display();
+    }
+
+    public function deal(){
+        $id = I('id');
+        $user_id = I('user_id');
+        if(M('apply_log')->where("user_id={$user_id} and id={$id}")->save(array('status'=>2))){
+            $this->success('处理成功！',U('/User/apply/'));
+        }else{
+            $this->error('处理失败！');
         }
     }
 

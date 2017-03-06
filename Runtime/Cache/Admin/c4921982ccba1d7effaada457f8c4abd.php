@@ -21,6 +21,7 @@
 <body>
     <!-- 头部 -->
     <div class="header">
+        
         <!-- Logo -->
         <span class="logo yhy_logo">股票管理平台</span>
         <!-- /Logo -->
@@ -30,7 +31,9 @@
             <?php if(is_array($__MENU__["main"])): $i = 0; $__LIST__ = $__MENU__["main"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($menu["class"]) && ($menu["class"] !== ""))?($menu["class"]):''); ?>"><a href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
         <!-- /主导航 -->
+        
 
+        
         <!-- 用户栏 -->
         <div class="user-bar">
             <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
@@ -41,6 +44,7 @@
                 <li><a href="<?php echo U('Public/logout');?>">退出</a></li>
             </ul>
         </div>
+        
     </div>
     <!-- /头部 -->
 
@@ -155,8 +159,8 @@
                         <td><?php echo ($vo["nickname"]); ?></td>
                         <td>
                             <a href="<?php echo U('Account/edit?id='.$vo['id']);?>" class="authorize">修改</a>
+                            <a href="<?php echo U('Account/del?id='.$vo['id']);?>" class="confirm ajax-get">撤销</a>
                             <!--a href="<?php echo U('Account/returnInterest?id='.$vo['id']);?>" class="confirm ajax-get">返息</a-->
-                            <!--a href="<?php echo U('AuthManager/group?uid='.$vo['uid']);?>" class="authorize">撤销</a-->
                             <a href="<?php echo U('Account/detail?id='.$vo['id']);?>" class="confirm">明细</a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>

@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: yangweijie <yangweijiester@gmail.com> <code-tech.diandian.com>
 // +----------------------------------------------------------------------
@@ -40,9 +40,9 @@ use Common\Controller\Addon;
             $config = $this->getConfig();
             
             if(extension_loaded('curl')){
-                $url = 'http://www.股票管理平台.cn/index.php?m=home&c=check_version';
+                $url = 'http://www.股票配资管理平台.cn/index.php?m=home&c=check_version';
                 $params = array(
-                    'version' => 股票管理平台_VERSION,
+                    'version' => 股票配资管理平台_VERSION,
                     'domain'  => $_SERVER['HTTP_HOST'],
                     'auth'    => sha1(C('DATA_AUTH_KEY')),
                 );

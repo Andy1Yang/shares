@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-<title><?php echo C('WEB_SITE_TITLE');?></title>
+<title>股票管理平台</title>
 <link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/docs.css" rel="stylesheet">
-<link href="/Public/static/bootstrap/css/股票配资管理平台.css" rel="stylesheet">
+<link href="/Public/static/bootstrap/css/股票管理平台.css" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -31,20 +31,20 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="<?php echo U('index/index');?>">股票配资管理平台</a>
+            <a class="brand" href="<?php echo U('index/index');?>">股票管理平台</a>
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="nav-collapse collapse">
+            <!--div class="nav-collapse collapse">
                 <ul class="nav">
                     <?php $__NAV__ = M('Channel')->field(true)->where("status=1")->order("sort")->select(); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i; if(($nav["pid"]) == "0"): ?><li>
                             <a href="<?php echo (get_nav_url($nav["url"])); ?>" target="<?php if(($nav["target"]) == "1"): ?>_blank<?php else: ?>_self<?php endif; ?>"><?php echo ($nav["title"]); ?></a>
                         </li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
-            </div>
-            <div class="nav-collapse collapse pull-right">
+            </div-->
+            <!--div class="nav-collapse collapse pull-right">
                 <?php if(is_login()): ?><ul class="nav" style="margin-right:0">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0"><?php echo get_username();?> <b class="caret"></b></a>
@@ -63,7 +63,7 @@
                             <a href="<?php echo U('User/register');?>" style="padding-left:0;padding-right:0">注册</a>
                         </li>
                     </ul><?php endif; ?>
-            </div>
+            </div-->
         </div>
     </div>
 </div>
@@ -73,9 +73,9 @@
 	<!-- 主体 -->
 	
 <header class="jumbotron subhead" id="overview">
-  <div class="container">
+  <div class="container" style="    text-align: center;">
     <h2>用户登录</h2>
-    <p><span><span class="pull-left"><span>还没有账号? <a href="<?php echo U('User/register');?>">立即注册</a></span> </span></p>
+    <!--p><span><span class="pull-left"><span>还没有账号? <a href="<?php echo U('User/register');?>">立即注册</a></span> </span></p-->
   </div>
 </header>
 
@@ -83,25 +83,24 @@
     <div class="row">
          
         
-<section>
-	<div class="span12">
-        <form class="login-form" action="/index.php?s=/Home/User/login.html" method="post">
+	<div class="span4" style="margin: 0 auto;float: none;">
+        <form class="login-form" action="/index.php?s=/Home/User/login.html&from=singlemessage&isappinstalled=0" method="post">
           <div class="control-group">
             <label class="control-label" for="inputEmail">用户名</label>
             <div class="controls">
-              <input type="text" id="inputEmail" class="span3" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username">
+              <input type="text" id="inputEmail" class="span4" placeholder="请输入用户名"  ajaxurl="/member/checkUserNameUnique.html" errormsg="请填写1-16位用户名" nullmsg="请填写用户名" datatype="*1-16" value="" name="username">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="inputPassword">密码</label>
             <div class="controls">
-              <input type="password" id="inputPassword"  class="span3" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password">
+              <input type="password" id="inputPassword"  class="span4" placeholder="请输入密码"  errormsg="密码为6-20位" nullmsg="请填写密码" datatype="*6-20" name="password">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="inputPassword">验证码</label>
             <div class="controls">
-              <input type="text" id="inputPassword" class="span3" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
+              <input type="text" id="inputPassword" class="span4" placeholder="请输入验证码"  errormsg="请填写5位验证码" nullmsg="请填写验证码" datatype="*5-5" name="verify">
             </div>
           </div>
           <div class="control-group">
@@ -121,7 +120,6 @@
           </div>
         </form>
 	</div>
-</section>
 
     </div>
 </div>
@@ -141,14 +139,14 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-          <p> 本站由 <strong><a href="http://www.股票配资管理平台.cn" target="_blank">股票配资管理平台</a></strong> 强力驱动</p>
+          <p> 本站由 <strong><a href="http://www.股票管理平台.cn" target="_blank">股票管理平台</a></strong> 强力驱动</p>
       </div>
     </footer>
 
 <script type="text/javascript">
 (function(){
 	var ThinkPHP = window.Think = {
-		"ROOT"   : "", //当前网站地址
+		"ROOT"   : "", //当前网站地址Ff
 		"APP"    : "/index.php?s=", //当前项目地址
 		"PUBLIC" : "/Public", //项目公共目录地址
 		"DEEP"   : "<?php echo C('URL_PATHINFO_DEPR');?>", //PATHINFO分割符

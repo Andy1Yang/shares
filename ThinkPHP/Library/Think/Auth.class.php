@@ -102,11 +102,6 @@ class Auth{
         if (!$this->_config['AUTH_ON'])
             return true;
         $authList = $this->getAuthList($uid,$type); //获取用户需要验证的所有有效规则列表
-//        foreach($authList as $key=>$item){
-//            $item = str_replace('//','/',$item);
-//            $authList[$key] =  trim($item,'/');
-//        }
-//        var_dump($authList);exit;
         if (is_string($name)) {
             $name = strtolower($name);
             if (strpos($name, ',') !== false) {

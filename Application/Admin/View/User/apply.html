@@ -1,0 +1,88 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>用户买卖申请</h2>
+    </div>
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="">申请类型</th>
+                <th class="">用户</th>
+                <th class="">股票代码</th>
+                <th class="">股票名称</th>
+                <th class="">市场</th>
+                <th class="">申请数量</th>
+                <th class="">申请价格</th>
+                <th class="">申请时间</th>
+                <th class="">状态</th>
+                <th class="">备注</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="_apply_list">
+                <volist name="_apply_list" id="vo">
+                    <tr>
+                        <td>{$vo.do_type_text} </td>
+                        <td>{$vo.name} </td>
+                        <td>{$vo.shares_code} </td>
+                        <td>{$vo.shares_name}</td>
+                        <td >{$vo.market_type_text}</td>
+                        <td>{$vo.deal_amount}</td>
+                        <td>{$vo.deal_price}</td>
+                        <td>{$vo.add_time|date='Y-m-d H:i:s',###}</td>
+                        <td>{$vo.status_text}</td>
+                        <td>{$vo.remarks}</td>
+                        <td>
+                            <if condition="$vo['status'] eq 2">
+                                <span style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;">已处理</span>
+                                <else/>
+                                <a  style="font-size: 14px;font-weight: bold;color: white;background-color: #5992CB;border-radius: 3px;padding: 5px;" href="{:U('User/deal?id='.$vo['id'].'&user_id='.$vo['user_id'])}" class="sell confirm ajax-get">处理</a>
+                            </if>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="16" class="text-center"> aOh! 暂时还没有内容! </td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script src="__STATIC__/thinkbox/jquery.thinkbox.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        //搜索功能
+        $("#search").click(function(){
+            var url = $(this).attr('url');
+            var query  = $('.search-form').find('input').serialize();
+            query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+            query = query.replace(/^&/g,'');
+            if( url.indexOf('?')>0 ){
+                url += '&' + query;
+            }else{
+                url += '?' + query;
+            }
+            window.location.href = url;
+        });
+        //回车搜索
+        $(".search-input").keyup(function(e){
+            if(e.keyCode === 13){
+                $("#search").click();
+                return false;
+            }
+        });
+        //导航高亮
+        var id = {$_user_info.id};
+        highlight_subnav("{:U('Operate/index/id/"+id+"')}");
+    </script>
+</block>

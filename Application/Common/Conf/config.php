@@ -1,8 +1,8 @@
 <?php
 // +----------------------------------------------------------------------
-// | 股票配资管理平台 [ WE CAN DO IT JUST THINK IT ]
+// | 股票管理平台 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.股票配资管理平台.cn All rights reserved.
+// | Copyright (c) 2013 http://www.股票管理平台.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
@@ -13,7 +13,7 @@
  */
 return array(
     /* 模块相关配置 */
-    'AUTOLOAD_NAMESPACE' => array('Addons' => 股票配资管理平台_ADDON_PATH), //扩展模块列表
+    'AUTOLOAD_NAMESPACE' => array('Addons' => 股票管理平台_ADDON_PATH), //扩展模块列表
     'DEFAULT_MODULE'     => 'Home',
     'MODULE_DENY_LIST'   => array('Common','User','Admin','Install'),
     //'MODULE_ALLOW_LIST'  => array('Home','Admin'),
@@ -36,10 +36,10 @@ return array(
 
     /* 数据库配置 */
     'DB_TYPE'   => 'mysql', // 数据库类型
-    'DB_HOST'   => '127.0.0.1', // 服务器地址
+    'DB_HOST'   => '120.76.158.248', // 服务器地址
     'DB_NAME'   => 'shares', // 数据库名
     'DB_USER'   => 'root', // 用户名
-    'DB_PWD'    => 'root',  // 密码
+    'DB_PWD'    => 'xxqwer@2016..',  // 密码
     'DB_PORT'   => '3306', // 端口
     'DB_PREFIX' => 'ss_', // 数据库表前缀
 
