@@ -98,7 +98,7 @@ class OperateController extends AdminController {
                 $deal_list2[$key]['now_value'] = $deal_list2[$key]['able_sell_amount']*$deal_list2[$key]['now_price'];//当前市值
                 //卖出费用
                 $sell_stamp_duty = $userModel->count_stamp_duty($deal_list2[$key]['now_value']);//印花税
-                $sell_transfer_fee = $userModel->count_transfer_fee($item[$key]['now_value']);//过户费
+                $sell_transfer_fee = $userModel->count_transfer_fee($deal_list2[$key]['now_value']);//过户费
                 $entrust_fee = $userModel->count_entrust_fee(1,$deal_list2[$key]['now_value']); //委托费
                 $commission = $userModel->count_commission($deal_list2[$key]['now_value'],$user_info['yongjin_rate']);//佣金
                 $deal_list2[$key]['sell_cost'] = round($sell_stamp_duty+$sell_transfer_fee+$entrust_fee+$commission,2);
@@ -129,6 +129,7 @@ class OperateController extends AdminController {
             $user_id = $tuid;
             $data = $tdata;
             $data['able_sell_amount'] =  $data['deal_amount'];
+            $is_enough = 2;
         }else{
             $user_id =  I('user_id');
             $data['shares_code'] = I('shares_code');
@@ -138,6 +139,7 @@ class OperateController extends AdminController {
             $data['deal_amount'] = I('deal_amount');
             $data['able_sell_amount'] = I('deal_amount');
             $data['deal_price'] = I('deal_price');
+            $is_enough = I('is_enough');
         }
 
 //        $data['is_account'] = I('is_account');
@@ -174,7 +176,7 @@ class OperateController extends AdminController {
 
         //修改用户表  可用资金
         $udata['able_money'] = $yuanArr['able_money']-$happen_money- $data['stamp_duty']-$data['transfer_fee']-$data['entrust_fee']-$data['commission'];
-        if($udata['able_money']<0){
+        if($is_enough==2 && $udata['able_money']<0){
             echo "<script>alert('已超过可用资金".-$udata['able_money']."元');history.go(-1);</script>";exit;
         }
         $bool = M('user')->where('id='.$user_id)->save($udata);

@@ -106,7 +106,7 @@ class WareController extends AdminController {
             if($user_list[$key]['now_value']==0){
                 $user_list[$key]['safe_line'] = 99.9;
             }else{
-                $user_list[$key]['safe_line'] =  number_format($user_list[$key]['float_ensure_money']/$user_list[$key]['now_value'],2)*100;//安全界限
+                $user_list[$key]['safe_line'] =  number_format($user_list[$key]['float_ensure_money']/$user_list[$key]['now_value']*100,2);//安全界限
             }
             $user_list[$key]['float_able_money'] = $item['able_money']+$user_list[$key]['win_loss_ratio']*$item['pledge'];//浮动可用资金
 //            $user_list[$key]['beilv'] = number_format($occupy_money/($item['ensure_money']*$item['pledge']),2);//倍率

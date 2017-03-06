@@ -178,7 +178,7 @@
         <p class="black"><a href="javascript:;" class="close">X</a></p>
         <div class="neikuan">
             <label class="item-label" style="font-weight: bold;">交易管理-买入</label>
-            <form action="{:U('buy')}" class="doposit" method="post">
+            <form action="{:U('buy')}" class="doposit" method="post" id="buyform">
                 <table cellpadding="80" cellspacing="80">
                     <tr>
                         <input type="hidden" name="user_id" value="{$_user_info.id}">
@@ -223,12 +223,12 @@
                     <tr>
                         <td class="tdtiao">操作备注：</td>
                         <td class="tiaotd2"> <input class='man' type="text" name="remarks" value=""></td>
-                        <td class="tdtiao"><!--证券账户：--></td>
+                        <td class="tdtiao">超可用资金</td>
                         <td class="tiaotd2">
-                            <!--select name="is_account" id="">
-                                <option value="2">无</option>
-                                <option value="1">有</option>
-                            </select-->
+                            <select name="is_enough" id="">
+                                <option value="2">不可以</option>
+                                <option value="1">可以</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -246,7 +246,7 @@
         <p class="black"><a href="javascript:;" class="close">X</a></p>
         <div class="neikuan">
             <label class="item-label" style="font-weight: bold;">交易管理-卖出</label>
-            <form action="{:U('sell')}" class="doposit" method="post">
+            <form action="{:U('sell')}" class="doposit" method="post" id="selform">
                 <table cellpadding="80" cellspacing="80">
                     <tr>
                         <input type="hidden" class="sell_id" name="id" value="">
@@ -329,6 +329,9 @@
             $('#buy').css('display','block');
             $('.buy_first').focus();
         });
+//        $('#buyform').on('submit',function(event){
+//            event.preventDefault();
+//        });
         //卖出
         $('.sell').click(function(){
             $('#sell').css('display','block');

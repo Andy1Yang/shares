@@ -1,0 +1,668 @@
+[ 2017-02-28T14:06:45+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:06:45+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:06:52+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Constant UC_AUTH_KEY already defined D:\phpStudy\WWW\shares\Application\User\Conf\config.php 第 17 行.
+NOTIC: [8] Undefined index: lite D:\phpStudy\WWW\shares\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0120s ]
+SQL: SELECT `uid`,`nickname`,`sales_id`,`yonjin_rate`,`lixi_rate`,`yonjin_money`,`lixi_money`,`total_money`,`telephone`,`sex`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`sort`,`level`,`status` FROM `ss_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_action` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `ss_action_log` [ RunTime:0.1090s ]
+SQL: INSERT INTO `ss_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1488262012','admin在2017-02-28 14:06登录了后台') [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\WWW\shares\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\phpStudy\WWW\shares\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ss_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1488175612 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0280s ]
+SQL: UPDATE `ss_member` SET `login`=`login`+1,`last_login_time`='1488262012',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0010s ]
+
+[ 2017-02-28T14:06:53+08:00 ] 127.0.0.1 /admin.php?s=/User/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%User/user_list%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 16 ORDER BY  sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '营业管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0090s ]
+SQL: SELECT `uid`,`nickname` FROM `ss_member`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_user` WHERE ( 1=1 ) ORDER BY sort desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: _page D:\phpStudy\WWW\shares\Runtime\Cache\Admin\efa67221bbcab2db2e4125c81f354bba.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:06:59+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:08:05+08:00 ] 127.0.0.1 /admin.php?s=/Ware/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0200s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Ware/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 157 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 157 ORDER BY  sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 157 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '预警管理' AND `pid` = 157 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( 1=1 and status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 and status<>3 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=4 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=6 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=7 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=8 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=9 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=10 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=11 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=12 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 72 行.
+NOTIC: [2] Division by zero D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 104 行.
+NOTIC: [2] Division by zero D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 113 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: sales_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 110 行.
+NOTIC: [8] Undefined variable: sales_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 110 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: _page D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:09:28+08:00 ] 127.0.0.1 /admin.php?s=/Ware/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Ware/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_menu` WHERE `id` = 157 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `ss_menu` WHERE `group` <> '' AND `pid` = 157 ORDER BY  sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `ss_menu` WHERE `pid` = 157 AND `hide` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ss_menu` WHERE `group` = '预警管理' AND `pid` = 157 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title` FROM `ss_sales` WHERE ( status=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_user` WHERE ( status=1 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_user` WHERE ( 1=1 and status=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=2 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=3 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=4 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=6 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=7 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=8 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=9 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=10 and sell_status=1 and status<>3 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=11 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `ss_deal_log` WHERE ( user_id=12 and sell_status=1 and status<>3 )  [ RunTime:0.0020s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 72 行.
+NOTIC: [2] Division by zero D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 104 行.
+NOTIC: [2] Division by zero D:\phpStudy\WWW\shares\Application\Admin\Controller\WareController.class.php 第 113 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: sales_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 110 行.
+NOTIC: [8] Undefined variable: sales_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 110 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: user_id D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 114 行.
+NOTIC: [8] Undefined variable: _page D:\phpStudy\WWW\shares\Runtime\Cache\Admin\29243ef1318e48ae68c75f134c5e3773.php 第 161 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:10:02+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:45:20+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+
+[ 2017-02-28T14:45:24+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+
+[ 2017-02-28T14:45:47+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.004000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:45:53+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+
+[ 2017-02-28T14:45:55+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-28T14:45:57+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+
+[ 2017-02-28T14:45:58+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:46:55+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0090s ]
+
+[ 2017-02-28T14:47:49+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0030s ]
+
+[ 2017-02-28T14:47:50+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-28T14:47:53+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+
+[ 2017-02-28T14:48:50+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0030s ]
+
+[ 2017-02-28T14:48:51+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:48:54+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+
+[ 2017-02-28T14:51:02+08:00 ] 127.0.0.1 /admin.php?s=/Operate/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_member` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ss_member` WHERE ( uid=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_sales` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title` FROM `ss_sales`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=1 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,name as title FROM `ss_user` WHERE ( status=1 and sales_id=8 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ss_user` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ss_deal_log` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1  ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 order by a.deal_time DESC,a.id DESC limit 0,6 [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `ss_deal_log` WHERE ( user_id=2 and status=1 and do_type=1 and sell_status=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: select a.*,b.nickname from ss_deal_log as a left join ss_member as b on a.member_id=b.uid where a.user_id=2 and a.status=1 and a.do_type=1 and a.sell_status=1 order by a.deal_time DESC,a.id DESC limit 0,8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-28T14:51:03+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0080s ]
+
+[ 2017-02-28T14:51:06+08:00 ] 127.0.0.1 /admin.php?s=/Operate/self_shares.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ss_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `ss_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `ss_menu` WHERE ( pid !=0 AND url like '%Operate/self_shares%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ss_user` [ RunTime:0.0050s ]
+

@@ -221,7 +221,7 @@
                         <td><?php echo ($vo["status_text"]); ?></td>
                         <td>
                             <a href="<?php echo U('Operate/edit?id='.$vo['id']);?>" class="authorize">修改</a>
-                            <a href="<?php echo U('Operate/del?id='.$vo['id'].'&uid='.$vo['user_id']);?>" class="confirm ajax-get">删除</a>
+                            <a href="<?php echo U('Operate/del?id='.$vo['id'].'&uid='.$vo['user_id']);?>" class="confirm ajax-get">撤销</a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                 <?php else: ?>
@@ -264,7 +264,7 @@
         <p class="black"><a href="javascript:;" class="close">X</a></p>
         <div class="neikuan">
             <label class="item-label" style="font-weight: bold;">交易管理-买入</label>
-            <form action="<?php echo U('buy');?>" class="doposit" method="post">
+            <form action="<?php echo U('buy');?>" class="doposit" method="post" id="buyform">
                 <table cellpadding="80" cellspacing="80">
                     <tr>
                         <input type="hidden" name="user_id" value="<?php echo ($_user_info["id"]); ?>">
@@ -309,12 +309,12 @@
                     <tr>
                         <td class="tdtiao">操作备注：</td>
                         <td class="tiaotd2"> <input class='man' type="text" name="remarks" value=""></td>
-                        <td class="tdtiao"><!--证券账户：--></td>
+                        <td class="tdtiao">超可用资金</td>
                         <td class="tiaotd2">
-                            <!--select name="is_account" id="">
-                                <option value="2">无</option>
-                                <option value="1">有</option>
-                            </select-->
+                            <select name="is_enough" id="">
+                                <option value="2">不可以</option>
+                                <option value="1">可以</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -332,7 +332,7 @@
         <p class="black"><a href="javascript:;" class="close">X</a></p>
         <div class="neikuan">
             <label class="item-label" style="font-weight: bold;">交易管理-卖出</label>
-            <form action="<?php echo U('sell');?>" class="doposit" method="post">
+            <form action="<?php echo U('sell');?>" class="doposit" method="post" id="selform">
                 <table cellpadding="80" cellspacing="80">
                     <tr>
                         <input type="hidden" class="sell_id" name="id" value="">
@@ -506,6 +506,9 @@
             $('#buy').css('display','block');
             $('.buy_first').focus();
         });
+//        $('#buyform').on('submit',function(event){
+//            event.preventDefault();
+//        });
         //卖出
         $('.sell').click(function(){
             $('#sell').css('display','block');
